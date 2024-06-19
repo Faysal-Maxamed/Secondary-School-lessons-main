@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 import Home from './Pages/Home';
-import AboutUs from './pages/AboutUs';
-import Courses from './pages/Courses';
-import CourseImage from './pages/CourseImage';
+import AboutUs from './Pages/AboutUs';
+import Courses from './Pages/Courses';
+import CourseImage from './Pages/CourseImage';
 import Login from './Components/Login';
-import Register from './components/Register';
-import Profile from './components/Profile';
+import Register from './Components/Register';
+import Profile from './Components/Profile';
 
 const App = () => {
   const [user, setUser] = useState(null);
