@@ -37,12 +37,12 @@ const Header = ({ user, onLogout }) => {
 
   return (
     <header className="bg-gray-800 text-white p-4 flex justify-between items-center relative z-20">
-      <Link to="/" className="text-2xl font-bold">
+      <Link to="/home" className="text-2xl font-bold">
         EduPlatform
       </Link>
       {user && (
         <nav className="space-x-4 flex items-center">
-          <Link to="/" className={getLinkClass('/')}>Home</Link>
+          <Link to="/home" className={getLinkClass('/')}>Home</Link>
           <Link to="/courses" className={getLinkClass('/courses')}>Courses</Link>
           <Link to="/contact-us" className={getLinkClass('/contact-us')}>Contact Us</Link>
           <Link to="/about-us" className={getLinkClass('/about-us')}>About Us</Link>
