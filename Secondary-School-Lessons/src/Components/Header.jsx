@@ -1,99 +1,85 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Header = ({ user, onLogout }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
   const location = useLocation();
-  const hideNav = location.pathname === '/login' || location.pathname === '/register';
+  const menuRef = useRef(null);
 
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
+  const handleLogout = () => {
+    if (window.confirm('Are you sure you want to log out?')) {
+      onLogout();
+      navigate('/login');
+    }
   };
 
-  const handleItemClick = () => {
-    setDropdownOpen(false);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const getLinkClass = (path) => {
+    return location.pathname === path ? 'text-yellow-500' : '';
   };
 
   return (
-    <header className="bg-gray-800 text-white p-4">
-      <nav className="container mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold">
-          {location.pathname === '/profile' ? 'Profile' : 'Learning Platform'}
-        </h1>
-        <div className="space-x-4 relative">
-          {!hideNav && (
-            <>
-              <Link to="/" className="hover:text-gray-400">Home</Link>
-              <Link to="/about-us" className="hover:text-gray-400">About Us</Link>
-              {user ? (
-                <>
-                  <Link to="/courses" className="hover:text-gray-400">Courses</Link>
-                  <div className="relative inline-block text-left">
-                    <div>
-                      <button
-                        type="button"
-                        onClick={toggleDropdown}
-                        className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-gray-700 text-sm font-medium text-white hover:bg-gray-600 focus:outline-none"
-                        id="options-menu"
-                      >
-                        <span className="text-white">Menu</span>
-                        <svg
-                          className="-mr-1 ml-2 h-5 w-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 3a1 1 0 100 2 1 1 0 000-2zm-4 5a1 1 0 100 2 1 1 0 000-2zm4 5a1 1 0 100 2 1 1 0 000-2zm0-7a1 1 0 100 2 1 1 0 000-2zm4 5a1 1 0 100 2 1 1 0 000-2zm0-7a1 1 0 100 2 1 1 0 000-2z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    {dropdownOpen && (
-                      <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                        <div
-                          className="py-1"
-                          role="menu"
-                          aria-orientation="vertical"
-                          aria-labelledby="options-menu"
-                        >
-                          <Link
-                            to="/profile"
-                            onClick={handleItemClick}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            role="menuitem"
-                          >
-                            Profile
-                          </Link>
-                          <button
-                            onClick={() => {
-                              handleItemClick();
-                              onLogout();
-                            }}
-                            className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            role="menuitem"
-                          >
-                            Logout
-                          </button>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </>
-              ) : (
-                <>
-                  <Link to="/login" className="hover:text-gray-400">Login</Link>
-                  <Link to="/register" className="hover:text-gray-400">Register</Link>
-                </>
-              )}
-            </>
-          )}
-        </div>
-      </nav>
+    <header className="bg-gray-800 text-white p-4 flex justify-between items-center relative z-20">
+      <Link to="/" className="text-2xl font-bold">
+        EduPlatform
+      </Link>
+      {user && (
+        <nav className="space-x-4 flex items-center">
+          <Link to="/" className={getLinkClass('/')}>Home</Link>
+          <Link to="/courses" className={getLinkClass('/courses')}>Courses</Link>
+          <Link to="/contact-us" className={getLinkClass('/contact-us')}>Contact Us</Link>
+          <Link to="/about-us" className={getLinkClass('/about-us')}>About Us</Link>
+          <div className="relative" ref={menuRef}>
+            <button
+              onClick={toggleMenu}
+              className="bg-gray-800 text-white font-bold hover:bg-gray-700 px-4 py-2 rounded"
+            >
+              Menu
+            </button>
+            {menuOpen && (
+              <ul className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
+                <li className="px-4 py-2 hover:bg-gray-200">
+                  <Link to="/profile" className="block text-gray-800">
+                    Profile
+                  </Link>
+                </li>
+                {user.isAdmin && (
+                  <li className="px-4 py-2 hover:bg-gray-200">
+                    <Link to="/admin" className="block text-gray-800">
+                      See Users
+                    </Link>
+                  </li>
+                )}
+                <li className="px-4 py-2 hover:bg-gray-200">
+                  <button
+                    onClick={handleLogout}
+                    className="block w-full text-left text-gray-800 bg-red-500 hover:bg-red-600 px-4 py-2 rounded transition duration-300"
+                  >
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            )}
+          </div>
+        </nav>
+      )}
     </header>
   );
 };

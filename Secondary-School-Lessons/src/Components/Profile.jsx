@@ -1,12 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Profile = ({ user }) => {
-  const [name, setName] = useState(user ? user.email : '');
-  const [image, setImage] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    district: '',
+    school: '',
+    class: '',
+    avatar: null
+  });
+
+  useEffect(() => {
+    if (user) {
+      setFormData({
+        name: user.name,
+        email: user.email,
+        phone: user.phone,
+        district: user.district,
+        school: user.school,
+        class: user.class,
+        avatar: user.avatar
+      });
+    }
+  }, [user]);
 
   const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
-      setImage(URL.createObjectURL(e.target.files[0]));
+      setFormData({
+        ...formData,
+        avatar: URL.createObjectURL(e.target.files[0])
+      });
     }
   };
 
@@ -19,8 +43,8 @@ const Profile = ({ user }) => {
             className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-200 hover:bg-gray-300 cursor-pointer"
             onClick={() => document.getElementById('fileInput').click()}
           >
-            {image ? (
-              <img src={image} alt="Profile" className="w-full h-full object-cover" />
+            {formData.avatar ? (
+              <img src={formData.avatar} alt="Profile" className="w-full h-full object-cover" />
             ) : (
               <div className="w-full h-full flex items-center justify-center text-gray-500">No Image</div>
             )}
@@ -31,7 +55,12 @@ const Profile = ({ user }) => {
               className="hidden"
             />
           </div>
-          <h3 className="text-xl font-bold mt-4">{name}</h3>
+          <h3 className="text-xl font-bold mt-4">{formData.name}</h3>
+          <p className="text-gray-700 mt-2">{formData.email}</p>
+          <p className="text-gray-700 mt-2">{formData.phone}</p>
+          <p className="text-gray-700 mt-2">{formData.district}</p>
+          <p className="text-gray-700 mt-2">{formData.school}</p>
+          <p className="text-gray-700 mt-2">{formData.class}</p>
         </div>
       </div>
     </div>
