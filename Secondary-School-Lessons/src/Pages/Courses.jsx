@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const coursesData = [
-  { id: 1, name: 'Course 1', description: 'Description for course 1' },
-  { id: 2, name: 'Course 2', description: 'Description for course 2' },
+  { id: 1, name: 'Arabic Course', description: 'In this course you will learn all Arabic lessons of all classes of the secondary school' },
+  { id: 2, name: 'English Course', description: 'In this course you will learn all English lessons of all classes of the secondary school' },
 ];
 
 const Courses = () => {
