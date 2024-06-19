@@ -1,68 +1,48 @@
-// src/pages/Home.jsx
 import React, { useState, useEffect } from 'react';
-import sampleImage1 from '../images/nature 5.jpg'; // Ensure the image paths are correct
-import sampleImage2 from '../images/this.jpg';
-import sampleImage3 from '../images/nature4.jpg';
-import sampleImage4 from '../images/nature 6.jpg';
+import backgroundVideo from '../video/this.mp4'; // Ensure the correct path to your video
 
 const Home = () => {
-  const [currentImage, setCurrentImage] = useState(sampleImage1); // Initial image state
-  const images = [sampleImage1, sampleImage2, sampleImage3, sampleImage4];
-  const delay = 5000; // Change image every 5 seconds
+  const [displayText, setDisplayText] = useState('');
+  const fullText = 'Welcome to Home of Education';
+  const [index, setIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+  const [colorIndex, setColorIndex] = useState(0);
+
+  const colors = ['text-white', 'text-black', 'text-red-500', 'text-green-500', 'text-blue-500', 'text-yellow-500'];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      // Rotate images
-      const currentIndex = images.indexOf(currentImage);
-      const nextIndex = (currentIndex + 1) % images.length;
-      setCurrentImage(images[nextIndex]);
-    }, delay);
+    const timeout = setTimeout(() => {
+      if (!deleting) {
+        setDisplayText(fullText.slice(0, index));
+        if (index < fullText.length) {
+          setIndex(index + 1);
+        } else {
+          setDeleting(true);
+        }
+      } else {
+        setDisplayText(fullText.slice(0, index));
+        if (index > 0) {
+          setIndex(index - 1);
+        } else {
+          setDeleting(false);
+          setColorIndex((prevColorIndex) => (prevColorIndex + 1) % colors.length);
+        }
+      }
+    }, deleting ? 100 : 150);
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, [currentImage, images]);
+    return () => clearTimeout(timeout);
+  }, [index, deleting, fullText, colors.length]);
 
   return (
-    <div className="container mx-auto my-8 p-4">
-      <div className="flex flex-col md:flex-row md:justify-between mb-8">
-        <div className="flex justify-around w-full mb-4 md:mb-0">
-          <div className="w-1/3 md:w-2.5/5 pr-2">
-            <img 
-              src={currentImage} 
-              alt="Learning" 
-              className="rounded-lg border-2 border-gray-300 cursor-pointer transition-transform duration-300 hover:scale-105 shadow-lg"
-            />
-          </div>
-          <div className="w-1/3 md:w-2.5/5 pl-2">
-            <img 
-              src={images[(images.indexOf(currentImage) + 1) % images.length]} 
-              alt="Learning" 
-              className="rounded-lg border-2 border-gray-300 cursor-pointer transition-transform duration-300 hover:scale-105 shadow-lg"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="md:w-1/2 mx-auto mb-8">
-        <h2 className="text-3xl font-bold mb-4">Welcome to Our Learning Platform</h2>
-        <p className="mb-4">Discover our wide range of courses designed to help you achieve your academic goals.</p>
-        <p>Explore interactive lessons and join our community of learners today!</p>
-      </div>
-      <div className="flex flex-col md:flex-row md:justify-between">
-        <div className="flex justify-around w-full">
-          <div className="w-1/3 md:w-2.5/5 pr-2">
-            <img 
-              src={images[(images.indexOf(currentImage) + 2) % images.length]} 
-              alt="Learning" 
-              className="rounded-lg border-2 border-gray-300 cursor-pointer transition-transform duration-300 hover:scale-105 shadow-lg"
-            />
-          </div>
-          <div className="w-1/3 md:w-2.5/5 pl-2">
-            <img 
-              src={images[(images.indexOf(currentImage) + 3) % images.length]} 
-              alt="Learning" 
-              className="rounded-lg border-2 border-gray-300 cursor-pointer transition-transform duration-300 hover:scale-105 shadow-lg"
-            />
-          </div>
-        </div>
+    <div className="relative min-h-screen overflow-hidden">
+      <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <source src={backgroundVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="relative z-10 flex items-center justify-center h-full">
+        <h1 className={`text-4xl md:text-6xl font-bold bg-opacity-75 bg-gray-800 p-4 rounded ${colors[colorIndex]}`}>
+          {displayText}
+        </h1>
       </div>
     </div>
   );
