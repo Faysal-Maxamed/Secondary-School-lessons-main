@@ -36,7 +36,7 @@ const Header = ({ user, onLogout }) => {
   };
 
   return (
-    <header className="bg-gray-800 text-white p-4 flex justify-between items-center relative z-20">
+    <header className="bg-blue-800 text-white p-4 flex justify-between items-center relative z-20">
       <Link to="/home" className="text-2xl font-bold">
         EduPlatform
       </Link>

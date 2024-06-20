@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import backgroundVideo from '../video/this.mp4'; // Ensure the correct path to your video
+import backgroundVideo from '../video/Background.mp4'; // Ensure the correct path to your video
 
 const Home = () => {
   const [displayText, setDisplayText] = useState('');
@@ -8,7 +8,7 @@ const Home = () => {
   const [deleting, setDeleting] = useState(false);
   const [colorIndex, setColorIndex] = useState(0);
 
-  const colors = ['text-white', 'text-black', 'text-red-500', 'text-green-500', 'text-blue-500', 'text-yellow-500'];
+  const colors = [ 'text-red-500', 'text-green-500', 'text-blue-500', 'text-yellow-500'];
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
+      <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover  z-0">
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

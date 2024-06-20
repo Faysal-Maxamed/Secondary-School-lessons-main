@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import defaultVideo from '../video/this.mp4'; // Ensure the correct path to your default video
+import defaultVideo from '../video/math.chp1.mp4'; // Ensure the correct path to your default video
 
 const lessonsData = {
   1: [
