@@ -43,9 +43,9 @@ const Header = ({ user, onLogout }) => {
       {user && (
         <nav className="space-x-4 flex items-center">
           <Link to="/home" className={getLinkClass('/')}>Home</Link>
+          <Link to="/about-us" className={getLinkClass('/about-us')}>About Us</Link>
           <Link to="/courses" className={getLinkClass('/courses')}>Courses</Link>
           <Link to="/contact-us" className={getLinkClass('/contact-us')}>Contact Us</Link>
-          <Link to="/about-us" className={getLinkClass('/about-us')}>About Us</Link>
           <div className="relative" ref={menuRef}>
             <button
               onClick={toggleMenu}
