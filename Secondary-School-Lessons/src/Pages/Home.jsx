@@ -39,8 +39,8 @@ const Home = () => {
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="relative z-10 flex items-center justify-center h-full">
-        <h1 className={`text-4xl md:text-6xl font-bold bg-opacity-75 bg-gray-800 p-4 rounded ${colors[colorIndex]}`}>
+      <div className="relative z-10  mt-44	margin-top: 11rem; flex items-center justify-center h-full">
+        <h1 className={`text-4xl md:text-6xl font-bold bg-opacity-75 bg-800 p-4 rounded ${colors[colorIndex]}`}>
           {displayText}
         </h1>
       </div>
