@@ -1,6 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome';
+// import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           <h4 className="text-2xl font-bold">EduPlatform</h4>
           <p className="mt-2">&copy; 2024 Learning Platform. All rights reserved.</p>
         </div>
-        <div className="space-x-4">
+        {/* <div className="space-x-4">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-500 transition">
             <FontAwesomeIcon icon={faFacebook} size="2x" />
           </a>
@@ -23,7 +23,7 @@ const Footer = () => {
           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-700 transition">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
