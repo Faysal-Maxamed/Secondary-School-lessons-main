@@ -29,7 +29,17 @@ const App = () => {
     const adminPassword = '123';
 
     if (userType === 'admin' && email === adminEmail && password === adminPassword) {
-      const adminUser = { email, isAdmin: true };
+      const adminUser = {
+        fullName: 'Pheyzal',
+        age: 21,
+        address: 'Taleh',
+        email: adminEmail,
+        phone: '0614388477',
+        district: 'hodan',
+        school: 'Ablaal',
+        class: 'F4',
+        isAdmin: true
+      };
       setUser(adminUser);
       localStorage.setItem('user', JSON.stringify(adminUser));
     } else {
@@ -40,8 +50,10 @@ const App = () => {
         localStorage.setItem('user', JSON.stringify(normalUser));
       } else {
         alert('Invalid credentials');
+        return false; // Prevent navigation
       }
     }
+    return true; // Allow navigation
   };
 
   const handleLogout = () => {
@@ -57,22 +69,25 @@ const App = () => {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
-        <Header user={user} onLogout={handleLogout} />
+      {user && location.pathname !== '/login' && location.pathname !== '/register' && (
+          <Header user={user} onLogout={handleLogout} />
+        )}
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={user ? <Home /> : <Navigate to="/login" />} />
+            <Route path="/" element={<Navigate to="/login" />} />
+            <Route path="/login" element={<Login onLogin={handleLogin} />} />
+            <Route path="/register" element={<Register onRegister={handleRegister} />} />
+            <Route path="/home" element={user ? <Home /> : <Navigate to="/login" />} />
             <Route path="/about-us" element={user ? <AboutUs /> : <Navigate to="/login" />} />
             <Route path="/courses" element={user ? <Courses /> : <Navigate to="/login" />} />
             <Route path="/courses/:courseId" element={user ? <CourseDetails /> : <Navigate to="/login" />} />
             <Route path="/courses/:courseId/lesson/:lessonId" element={user ? <Lesson /> : <Navigate to="/login" />} />
-            <Route path="/login" element={!user ? <Login onLogin={handleLogin} /> : <Navigate to="/" />} />
-            <Route path="/register" element={<Register onRegister={handleRegister} />} />
-            <Route path="/profile" element={user ? <Profile user={user} /> : <Navigate to="/login" />} />
+            <Route path="/profile" element={user ? <Profile user={user} setUser={setUser} /> : <Navigate to="/login" />} />
             <Route path="/contact-us" element={user ? <ContactUs /> : <Navigate to="/login" />} />
-            {user && user.isAdmin && <Route path="/admin" element={<Admin users={users} />} />}
+            {user && user.isAdmin && <Route path="/admin" element={<Admin users={users} setUsers={setUsers} />} />}
           </Routes>
         </main>
-        <Footer />
+        {window.location.pathname === '/contact-us' && <Footer />}
       </div>
     </Router>
   );
