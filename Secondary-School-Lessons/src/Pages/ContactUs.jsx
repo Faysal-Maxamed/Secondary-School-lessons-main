@@ -12,6 +12,7 @@ const ContactUs = () => {
   return (
     <div className="container mx-auto p-4 my-8 max-w-md">
       <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
+      <p className="mb-4">If you have any questions or inquiries, please fill out the form below, and we will get back to you as soon as possible.</p>
       {messageSent ? (
         <p className="text-green-500">Your message was sent successfully.</p>
       ) : (
