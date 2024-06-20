@@ -9,6 +9,7 @@ const coursesData = [
   { id: 5, name: 'History Course', description: 'Dive into the important events and figures in History.' },
   { id: 6, name: 'Biology Course', description: 'Understand the complexities of Biology with our comprehensive course.' },
   { id: 7, name: 'Math Course', description: 'Master Mathematics with lessons covering various topics.' },
+  { id: 8, name: 'Geography Course', description: 'Understand Geography with lessons covering various topics.' },
 ];
 
 const Courses = () => {
