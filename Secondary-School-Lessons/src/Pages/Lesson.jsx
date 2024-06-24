@@ -43,6 +43,11 @@ const lessonsData = {
     { id: 2, title: 'Geography Lesson 2', videoUrl: '', description: 'Description for Math Lesson 2' },
     { id: 3, title: 'Geography Lesson 3', videoUrl: '', description: 'Description for Math Lesson 3' }
   ],
+  9: [
+    { id: 1, title: 'Islamic Lesson 1', videoUrl: '', description: 'Description for Math Lesson 1' },
+    { id: 2, title: 'Islamic Lesson 2', videoUrl: '', description: 'Description for Math Lesson 2' },
+    { id: 3, title: 'Islamic Lesson 3', videoUrl: '', description: 'Description for Math Lesson 3' }
+  ],
 };
 
 const Lesson = () => {
