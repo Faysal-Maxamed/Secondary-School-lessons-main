@@ -36,50 +36,138 @@ const Header = ({ user, onLogout }) => {
   };
 
   return (
-    <header className="bg-blue-800 text-white p-4 flex justify-between items-center relative z-20">
+    <header className="bg-gray-600 text-white p-4 flex justify-between items-center relative z-20">
       <Link to="/home" className="text-2xl font-bold">
         EduPlatform
       </Link>
-      {user && (
-        <nav className="space-x-4 flex items-center">
-          <Link to="/home" className={getLinkClass('/')}>Home</Link>
-          <Link to="/about-us" className={getLinkClass('/about-us')}>About Us</Link>
-          <Link to="/courses" className={getLinkClass('/courses')}>Courses</Link>
-          <Link to="/contact-us" className={getLinkClass('/contact-us')}>Contact Us</Link>
-          <div className="relative" ref={menuRef}>
-            <button
-              onClick={toggleMenu}
-              className="bg-gray-800 text-white font-bold hover:bg-gray-700 px-4 py-2 rounded"
-            >
-              Menu
-            </button>
-            {menuOpen && (
-              <ul className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
-                <li className="px-4 py-2 hover:bg-gray-200">
-                  <Link to="/profile" className="block text-gray-800">
+      <nav className="space-x-4 flex items-center">
+        <div className="md:hidden">
+          <button
+            onClick={toggleMenu}
+            className="block text-gray-200 hover:text-white focus:text-white focus:outline-none"
+          >
+           <svg
+            className="h-6 w-6 fill-current"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              className={menuOpen ? 'hidden' : 'block'}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+            <path
+              className={menuOpen ? 'block' : 'hidden'}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+          </button>
+          {menuOpen && (
+            <div className="absolute right-0 top-16 mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30" ref={menuRef}>
+              <Link
+                to="/home"
+                className={`block px-4 py-2 text-gray-800 ${getLinkClass('/')}`}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about-us"
+                className={`block px-4 py-2 text-gray-800 ${getLinkClass('/about-us')}`}
+              >
+                About Us
+              </Link>
+              <Link
+                to="/courses"
+                className={`block px-4 py-2 text-gray-800 ${getLinkClass('/courses')}`}
+              >
+                Courses
+              </Link>
+              <Link
+                to="/contact-us"
+                className={`block px-4 py-2 text-gray-800 ${getLinkClass('/contact-us')}`}
+              >
+                Contact Us
+              </Link>
+              {user && (
+                <>
+                  <hr className="my-2" />
+                  <Link to="/profile" className="block px-4 py-2 text-gray-800">
                     Profile
                   </Link>
-                </li>
-                {user.isAdmin && (
-                  <li className="px-4 py-2 hover:bg-gray-200">
-                    <Link to="/admin" className="block text-gray-800">
+                  {user.isAdmin && (
+                    <Link to="/admin" className="block px-4 py-2 text-gray-800">
                       See Users
                     </Link>
-                  </li>
-                )}
-                <li className="px-4 py-2 hover:bg-gray-200">
+                  )}
                   <button
                     onClick={handleLogout}
                     className="block w-full text-left text-gray-800 bg-red-500 hover:bg-red-600 px-4 py-2 rounded transition duration-300"
                   >
                     Logout
                   </button>
-                </li>
-              </ul>
-            )}
-          </div>
-        </nav>
-      )}
+                </>
+              )}
+            </div>
+          )}
+        </div>
+        <div className="md:flex md:items-center md:space-x-4 hidden">
+          <Link to="/home" className={`text-gray-200 hover:text-white ${getLinkClass('/')}`}>
+            Home
+          </Link>
+          <Link
+            to="/about-us"
+            className={`text-gray-200 hover:text-white ${getLinkClass('/about-us')}`}
+          >
+            About Us
+          </Link>
+          <Link
+            to="/courses"
+            className={`text-gray-200 hover:text-white ${getLinkClass('/courses')}`}
+          >
+            Courses
+          </Link>
+          <Link
+            to="/contact-us"
+            className={`text-gray-200 hover:text-white ${getLinkClass('/contact-us')}`}
+          >
+            Contact Us
+          </Link>
+          {user && (
+            <>
+              <Link to="/profile" className="text-gray-200 hover:text-white">
+                Profile
+              </Link>
+              {user.isAdmin && (
+                <Link to="/admin" className="text-gray-200 hover:text-white">
+                  See Users
+                </Link>
+              )}
+              <button
+                onClick={handleLogout}
+                className="text-gray-200 bg-red-500 hover:bg-red-600 px-4 py-2 rounded transition duration-300"
+              >
+                Logout
+              </button>
+            </>
+          )}
+        </div>
+      </nav>
+      {/* Responsive Menu Button */}
+      <button
+            onClick={toggleMenu}
+            className="text-white md:hidden"
+            aria-label="Menu"
+          >
+            <svg
+              className="w-6 h-6 fill-current"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 5h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2zm0 6h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2zm0 6h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2z"
+              />
+            </svg>
+          </button>
     </header>
   );
 };
