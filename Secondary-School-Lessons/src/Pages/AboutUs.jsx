@@ -35,17 +35,17 @@ const AboutUs = () => {
         <h3 className="text-xl font-bold mb-4">Our Team</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
-            <img src={teamMember1} alt="John Doe" className="rounded-lg border-2 border-gray-300 mb-4" />
+            <img src={teamMember1} alt="John Doe" className="rounded-lg border-2 border-gray-300 mb-4 hover:ml-5" />
             <h3 className="text-lg font-bold">Sacdia Mohamed</h3>
             <p>Course Instructor</p>
           </div>
           <div className="text-center">
-            <img src={teamMember2} alt="Jane Smith" className="rounded-lg border-2 border-gray-300 mb-4" />
+            <img src={teamMember2} alt="Jane Smith" className="rounded-lg border-2 border-gray-300 mb-4 hover:ml-5" />
             <h3 className="text-lg font-bold">Maandeq Hassan</h3>
             <p>Course Instructor</p>
           </div>
           <div className="text-center">
-            <img src={teamMember3} alt="Sam Brown" className="rounded-lg border-2 border-gray-300 mb-4" />
+            <img src={teamMember3} alt="Sam Brown" className="rounded-lg border-2 border-gray-300 mb-4 hover:ml-5" />
             <h3 className="text-lg font-bold">ZamZam A/lahi</h3>
             <p>Course Instructor</p>
           </div>
