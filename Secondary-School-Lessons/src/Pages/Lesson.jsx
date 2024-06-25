@@ -72,7 +72,7 @@ const Lesson = () => {
         ) : (
           <div>
             <h3 className="text-xl font-semibold  mt-32 ml-52">No lesson selected</h3>
-            <p className='ml-4'>Please select a lesson from the sidebar</p>
+            <p className='ml-'>Please select a lesson from the sidebar</p>
           </div>
         )}
       </div>
