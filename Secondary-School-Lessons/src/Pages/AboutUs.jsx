@@ -36,7 +36,7 @@ const AboutUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
             <img src={teamMember1} alt="John Doe" className="rounded-lg border-2 border-gray-300 mb-4 hover:ml-5" />
-            <h3 className="text-lg font-bold">Sacdia Mohamed</h3>
+            <h3 className="text-lg font-bold">Maryama Mohamed</h3>
             <p>Course Instructor</p>
           </div>
           <div className="text-center">
