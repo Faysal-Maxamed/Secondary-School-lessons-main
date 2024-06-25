@@ -12,6 +12,7 @@ import Register from './Components/Register';
 import Profile from './Components/Profile';
 import ContactUs from './Pages/ContactUs';
 import Admin from './Pages/Admin';
+import RegisterAdmin from './Components/RegisterAdmin';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -84,7 +85,9 @@ const App = () => {
             <Route path="/courses/:courseId/lesson/:lessonId" element={user ? <Lesson /> : <Navigate to="/login" />} />
             <Route path="/profile" element={user ? <Profile user={user} setUser={setUser} /> : <Navigate to="/login" />} />
             <Route path="/contact-us" element={user ? <ContactUs /> : <Navigate to="/login" />} />
+            <Route path="/RegisterAdmin" element={<RegisterAdmin onRegister={handleRegister} />} />
             {user && user.isAdmin && <Route path="/admin" element={<Admin users={users} setUsers={setUsers} />} />}
+
           </Routes>
         </main>
         {window.location.pathname === '/contact-us' && <Footer />}

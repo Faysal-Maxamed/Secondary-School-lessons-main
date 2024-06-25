@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const coursesData = [
-  { id: 1, name: 'Arabic Course', description: 'In this course you will learn all Arabic lessons of all classes of the secondary school' },
+  { id: 1, name: 'دورة اللغة العربية', description: 'ستتعلم في هذه الدورة جميع دروس اللغة العربية لجميع صفوف المرحلة الثانوية' },
   { id: 2, name: 'English Course', description: 'In this course you will learn all English lessons of all classes of the secondary school' },
   { id: 3, name: 'Physics Course', description: 'Learn the fundamentals of Physics for secondary school.' },
   { id: 4, name: 'Chemistry Course', description: 'Explore the principles of Chemistry through detailed lessons.' },
