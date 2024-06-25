@@ -10,11 +10,14 @@ const coursesData = [
   { id: 6, name: 'Biology Course', description: 'Understand the complexities of Biology with our comprehensive course.' },
   { id: 7, name: 'Math Course', description: 'Master Mathematics with lessons covering various topics.' },
   { id: 8, name: 'Geography Course', description: 'Understand Geography with lessons covering various topics.' },
-  { id: 9, name: 'Islamic Course', description: 'Understand about Islamic regions  topics and more lessons about islamic learn.' }
+  { id: 9, name: 'Islamic Course', description: 'Understand about Islamic regions topics and more lessons about Islamic learn.' }
 ];
+
+
 
 const Courses = () => {
   return (
+    
     <div className="container mx-auto p-4 my-8">
       <h2 className="text-3xl font-bold mb-8 text-center">Courses</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -34,6 +37,7 @@ const Courses = () => {
           </Link>
         ))}
       </div>
+    
     </div>
   );
 };
