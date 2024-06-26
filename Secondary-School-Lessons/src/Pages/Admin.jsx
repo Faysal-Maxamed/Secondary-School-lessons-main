@@ -40,32 +40,7 @@ const Admin = ({ users, setUsers }) => {
     }
   };
 
-  const handleUpdateUser = (index) => {
-    if (index === -1) {
-      alert('User not found');
-      return;
-    }
-
-    // Check if any field is blank
-    for (let key in formData) {
-      if (formData[key] === '' || formData[key] === null) {
-        alert('All fields must be filled out');
-        return;
-      }
-    }
-
-    const updatedUsers = users.map((user, i) => (i === index ? formData : user));
-    setUsers(updatedUsers);
-    setFormData({
-      fullName: '',
-      age: '',
-      address: '',
-      phone: '',
-      email: '',
-      number:''
-    });
-  };
-
+  
   return (
     <div className="container mx-auto p-4 my-8">
       <h2 className="text-3xl font-bold mb-4">Admin Page</h2>
@@ -77,7 +52,6 @@ const Admin = ({ users, setUsers }) => {
                 <th className="py-2 px-4 border">Full Name</th>
                 <th className="py-2 px-4 border">Age</th>
                 <th className="py-2 px-4 border">Address</th>
-                <th className="py-2 px-4 border">Class</th>
                 <th className="py-2 px-4 border">Phone</th>
                 <th className="py-2 px-4 border">Email</th>
                 <th className="py-2 px-4 border">Actions</th>
@@ -89,18 +63,12 @@ const Admin = ({ users, setUsers }) => {
                   <td className="py-2 px-4 border">{user.fullName}</td>
                   <td className="py-2 px-4 border">{user.age}</td>
                   <td className="py-2 px-4 border">{user.address}</td>
-                  <td className="py-2 px-4 border">{user.Class}</td>
                   <td className="py-2 px-4 border">{user.phone}</td>
                   <td className="py-2 px-4 border">{user.email}</td>
                   <td className="py-2 px-4 border">
+                   
                     <button
-                      className="bg-yellow-500 text-white px-2 py-1 rounded mr-2"
-                      onClick={() => setFormData(user)}
-                    >
-                      Edit
-                    </button>
-                    <button
-                      className="bg-red-500 text-white px-2 py-1 rounded"
+                      className="bg-red-500 text-white px-2 py-1 rounded ml-16"
                       onClick={() => handleDeleteUser(index)}
                     >
                       Delete
