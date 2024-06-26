@@ -1,83 +1,149 @@
 import React, { useState } from 'react';
-import { FaVideo } from 'react-icons/fa';
+import { useParams, Link } from 'react-router-dom';
+import { FaPlayCircle } from 'react-icons/fa';
+import lesson1Arabic from "../video/math.chp1.mp4"
+
+
+const lessonsData = {
+  1: [
+    { id: 1, title: 'Arabic Lesson 1', videoUrl: 'lesson1Arabic', description: 'Description for Arabic Lesson 1' },
+    { id: 2, title: 'Arabic Lesson 2', videoUrl: '', description: 'Description for Arabic Lesson 2' },
+    { id: 3, title: 'Arabic Lesson 3', videoUrl: '', description: 'Description for Arabic Lesson 3' },
+    { id: 4, title: 'Arabic Lesson 4', videoUrl: '', description: 'Description for Arabic Lesson 4' },
+    { id: 5, title: 'Arabic Lesson 5', videoUrl: '', description: 'Description for Arabic Lesson 5' }
+   
+  ],
+  2: [
+    { id: 1, title: 'English Lesson 1', videoUrl: '', description: 'Description for English Lesson 1' },
+    { id: 2, title: 'English Lesson 2', videoUrl: '', description: 'Description for English Lesson 2' },
+    { id: 3, title: 'English Lesson 3', videoUrl: '', description: 'Description for English Lesson 3' },
+    { id: 4, title: 'English Lesson 4', videoUrl: '', description: 'Description for English Lesson 4' },
+    { id: 5, title: 'English Lesson 5', videoUrl: '', description: 'Description for English Lesson 5' },
+    { id: 6, title: 'English Lesson 6', videoUrl: '', description: 'Description for English Lesson 6' }
+  ],
+  3: [
+    { id: 1, title: 'Physics Lesson 1', videoUrl: '', description: 'Description for Physics Lesson 1' },
+    { id: 2, title: 'Physics Lesson 2', videoUrl: '', description: 'Description for Physics Lesson 2' },
+    { id: 3, title: 'Physics Lesson 3', videoUrl: '', description: 'Description for Physics Lesson 3' },
+    { id: 1, title: 'Physics Lesson 4', videoUrl: '', description: 'Description for Physics Lesson 4' },
+    { id: 4, title: 'Physics Lesson 5', videoUrl: '', description: 'Description for Physics Lesson 5' },
+    { id: 5, title: 'Physics Lesson 6', videoUrl: '', description: 'Description for Physics Lesson 6' },
+    { id: 3, title: 'Physics Lesson 7', videoUrl: '', description: 'Description for Physics Lesson 7' },
+  ],
+  4: [
+    { id: 1, title: 'Chemistry Lesson 1', videoUrl: '', description: 'Description for Chemistry Lesson 1' },
+    { id: 2, title: 'Chemistry Lesson 2', videoUrl: '', description: 'Description for Chemistry Lesson 2' },
+    { id: 3, title: 'Chemistry Lesson 3', videoUrl: '', description: 'Description for Chemistry Lesson 3' },
+    { id: 4, title: 'Chemistry Lesson 4', videoUrl: '', description: 'Description for Chemistry Lesson 4' },
+    { id: 5, title: 'Chemistry Lesson 5', videoUrl: '', description: 'Description for Chemistry Lesson 5' },
+    { id: 6, title: 'Chemistry Lesson 6', videoUrl: '', description: 'Description for Chemistry Lesson 6' },
+    { id: 7, title: 'Chemistry Lesson 7', videoUrl: '', description: 'Description for Chemistry Lesson 7' }
+  ],
+  5: [
+    { id: 1, title: 'History Lesson 1', videoUrl: '', description: 'Description for History Lesson 1' },
+    { id: 2, title: 'History Lesson 2', videoUrl: '', description: 'Description for History Lesson 2' },
+    { id: 3, title: 'History Lesson 3', videoUrl: '', description: 'Description for History Lesson 3' },
+    { id: 4, title: 'History Lesson 4', videoUrl: '', description: 'Description for History Lesson 4' },
+    { id: 5, title: 'History Lesson 5', videoUrl: '', description: 'Description for History Lesson 5' },
+   
+  ],
+  6: [
+    { id: 1, title: 'Biology Lesson 1', videoUrl: '', description: 'Description for Biology Lesson 1' },
+    { id: 2, title: 'Biology Lesson 2', videoUrl: '', description: 'Description for Biology Lesson 2' },
+    { id: 3, title: 'Biology Lesson 3', videoUrl: '', description: 'Description for Biology Lesson 3' },
+    { id: 4, title: 'Biology Lesson 4', videoUrl: '', description: 'Description for Biology Lesson 4' },
+    { id: 5, title: 'Biology Lesson 5', videoUrl: '', description: 'Description for Biology Lesson 5' },
+    { id: 6, title: 'Biology Lesson 6', videoUrl: '', description: 'Description for Biology Lesson 6' },
+    { id: 7, title: 'Biology Lesson 7', videoUrl: '', description: 'Description for Biology Lesson 7' }
+  ],
+  7: [
+    { id: 1, title: 'Math Lesson 1', videoUrl: '', description: 'Description for Math Lesson 1' },
+    { id: 2, title: 'Math Lesson 2', videoUrl: '', description: 'Description for Math Lesson 2' },
+    { id: 3, title: 'Math Lesson 3', videoUrl: '', description: 'Description for Math Lesson 3' },
+    { id: 4, title: 'Math Lesson 4', videoUrl: '', description: 'Description for Math Lesson 4' },
+    { id: 5, title: 'Math Lesson 5', videoUrl: '', description: 'Description for Math Lesson 5' },
+    { id: 6, title: 'Math Lesson 6', videoUrl: '', description: 'Description for Math Lesson 6' },
+    { id: 7, title: 'Math Lesson 7', videoUrl: '', description: 'Description for Math Lesson 7' },
+    { id: 8, title: 'Math Lesson 8', videoUrl: '', description: 'Description for Math Lesson 8' },
+    { id: 9, title: 'Math Lesson 9', videoUrl: '', description: 'Description for Math Lesson 9' },
+  ],
+  8: [
+    { id: 1, title: 'Geography lesson 1', videoUrl: '', description: 'Description for Geography Lesson 1' },
+    { id: 2, title: 'Geography lesson  2', videoUrl: '', description: 'Description for Geography Lesson 2' },
+    { id: 3, title: 'Geography lesson  3', videoUrl: '', description: 'Description for Geography Lesson 3' },
+    { id: 4, title: 'Geography lesson  4', videoUrl: '', description: 'Description for Geography Lesson 4' }
+  ],
+  
+};
+
 
 const Lesson = () => {
-  const [selectedLesson, setSelectedLesson] = useState('');
+  const { courseId, lessonId } = useParams();
+  const lessons = lessonsData[courseId];
+  const lesson = lessons.find((lesson) => lesson.id === parseInt(lessonId));
 
-  const lessons = [
-    { id: 1, title: 'Lesson 1', chapter: 1 },
-    { id: 2, title: 'Lesson 2', chapter: 1 },
-    { id: 3, title: 'Lesson 3', chapter: 1 },
-    { id: 4, title: 'Lesson 4', chapter: 2 },
-    { id: 5, title: 'Cashirki 1aad', chapter: 2 },
-    { id: 6, title: 'Lesson 2.2', chapter: 2 },
-    { id: 7, title: 'Lesson 2.3', chapter: 2 },
-    { id: 8, title: 'Lesson 2.4', chapter: 2 },
-    { id: 9, title: 'Cashirki murugada', chapter: 3 },
-    { id: 10, title: 'Cashirki xyawanada', chapter: 3 },
-    { id: 11, title: 'Cashirki Ani maa og', chapter: 4 },
-    { id: 12, title: 'Cashirki soomaalida', chapter: 4 }
-  ];
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
 
-  const chapters = [1, 2, 3, 4, 5];
-  const [videoSize, setVideoSize] = useState('small');
-  const handleChange = (event) => {
-    setSelectedLesson(event.target.value);
+  const handleVideoClick = () => {
+    setIsVideoVisible(true);
   };
 
+  if (!lesson) {
+    return <div>Lesson not found</div>;
+  }
+
   return (
-    <div className="container mx-auto p-4 my-8 flex   ">
+    <div className="container mx-auto p-4 my-8 flex">
       {/* Sidebar */}
-      <div className="w-1/4 bg-slate-100  ">
-        <h2 className="text-3xl font-bold mb-4  ml-24 mt-4">Lessons</h2>
-        <div className="space-y-4  ">
-          {chapters.map((chapter) => (
-            <div key={chapter}>
-              <h3 className="text-xl font-semibold mb-2">Chapter {chapter}</h3>
-              <select
-                className="block w-full p-2 bg-blue-200 rounded-lg hover:bg-blue-300 hover:shadow-lg transition "
-                value={selectedLesson}
-                onChange={handleChange}
-              >
-                <option value="">Select a lesson</option>
-                {lessons
-                  .filter((lesson) => lesson.chapter === chapter)
-                  .map((lesson) => (
-                    <option key={lesson.id} value={lesson.id}>
-                      {lesson.title}
-                    </option>
-                  ))}
-              </select>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* Main content */}
-      <div className="w-3/4 pl-4 ">
-        {selectedLesson ? (
+      <div className={`${isSidebarOpen ? 'w-1/3' : 'w-12'} transition-width duration-300 bg-gray-100 p-4`}>
+        <button
+          className="text-gray-600 hover:text-gray-900 mb-4"
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        >
+          <i className={`fas fa-${isSidebarOpen ? 'chevron-left' : 'chevron-right'}`}></i>
+        </button>
+        {isSidebarOpen && (
           <div>
-            <h3 className="text-xl font-semibold mb-2">Selected Lesson: {selectedLesson}</h3>
-            <div className="flex items-center space-x-4">
-            <div className="w-1/2">
-  <div className="relative  max-w-screen-lg  ">
-    <video controls className="w-full h-">
-      <source src="" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-blue-500">
-      <FaVideo className="w-8 h-8" />
-    </div>
-  </div>
-</div>
-              
+             
+            <h4 className="text-xl font-semibold mb-4">Other Lessons in this Course:</h4>
+           
+            <div className="space-y-4 ">
+              {lessons.map((lesson) => (
+                <Link
+                  key={lesson.id}
+                  to={`/courses/${courseId}/lesson/${lesson.id}`}
+                  className="flex items-center justify-center p-2 bg-blue-300 rounded-lg hover:bg-blue-500 hover:shadow-lg transition"
+                >
+                <FaPlayCircle className="text-gray-800 w-8 mr-4  text-4xl" />
+                  {lesson.title}
+                </Link>
+              ))}
             </div>
-          </div>
-        ) : (
-          <div>
-            <h3 className="text-xl font-semibold  mt-32 ml-52">No lesson selected</h3>
-            <p className='ml-'>Please select a lesson from the sidebar</p>
           </div>
         )}
+      </div>
+      {/* Main content */}
+      <div className={`${isSidebarOpen ? 'w-2/3' : 'w-full'} transition-width duration-300 pl-4`}>
+        <h2 className="text-3xl font-bold mb-2">{`Course ${courseId}`}</h2>
+        <h3 className="text-2xl font-semibold mb-4">{lesson.title}</h3>
+        <div className="bg-gray-200 rounded-lg overflow-hidden mb-4">
+          {isVideoVisible ? (
+            <video key={lesson.id} controls className="w-full h-auto">
+              <source src={ lesson1Arabic} type="video/mp4" />
+             
+            </video>
+          ) : 
+          (
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              onClick={handleVideoClick}
+            >
+              Watch Lesson
+            </button>
+          )}
+        </div>
+        <p className="mb-4">{lesson.description}</p>
       </div>
     </div>
   );
