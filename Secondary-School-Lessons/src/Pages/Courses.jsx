@@ -31,7 +31,7 @@ const Courses = () => {
               <h3 className="text-xl font-bold mb-2">{course.name}</h3>
               <p className="text-gray-700">{course.description}</p>
             </div>
-            <div className="bg-blue-500 text-white py-2 px-4 rounded-b-lg">
+            <div className="bg-gray-800 text-white py-2 px-4 rounded-b-lg">
               <span className="text-sm">Start Course</span>
             </div>
           </Link>

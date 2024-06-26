@@ -67,7 +67,7 @@ const Profile = ({ user, setUser }) => {
 
   return (
     <div className="container mx-auto p-4 my-8">
-      <div className="bg-yellow-200 p-8 rounded-lg shadow-md max-w-md mx-auto">
+      <div className="bg-gray-600 p-8 rounded-lg shadow-md max-w-md mx-auto">
         <h2 className="text-3xl font-bold mb-8">Profile</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col items-center">

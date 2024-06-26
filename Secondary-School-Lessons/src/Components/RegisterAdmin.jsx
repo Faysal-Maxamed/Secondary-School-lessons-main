@@ -65,7 +65,7 @@ const RegisterAdmin = () => {
 
         <button
           onClick={handleRegister}
-          className="bg-blue-500 text-white py-2 px-4 rounded rounded-3xl hover:bg-blue-600"
+          className="bg-gray-600 text-white py-2 px-4 rounded rounded-3xl hover:bg-blue-600"
         >
           Register
         </button>

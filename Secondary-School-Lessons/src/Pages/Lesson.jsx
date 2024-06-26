@@ -20,13 +20,13 @@ const Lesson = () => {
   ];
 
   const chapters = [1, 2, 3, 4, 5];
-
+  const [videoSize, setVideoSize] = useState('small');
   const handleChange = (event) => {
     setSelectedLesson(event.target.value);
   };
 
   return (
-    <div className="container mx-auto p-4 my-8 flex  ">
+    <div className="container mx-auto p-4 my-8 flex   ">
       {/* Sidebar */}
       <div className="w-1/4 bg-slate-100  ">
         <h2 className="text-3xl font-bold mb-4  ml-24 mt-4">Lessons</h2>
@@ -53,14 +53,14 @@ const Lesson = () => {
         </div>
       </div>
       {/* Main content */}
-      <div className="w-3/4 pl-4">
+      <div className="w-3/4 pl-4 ">
         {selectedLesson ? (
           <div>
             <h3 className="text-xl font-semibold mb-2">Selected Lesson: {selectedLesson}</h3>
             <div className="flex items-center space-x-4">
             <div className="w-1/2">
-  <div className="relative">
-    <video controls className="w-full">
+  <div className="relative  max-w-screen-lg  ">
+    <video controls className="w-full h-">
       <source src="" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -69,10 +69,7 @@ const Lesson = () => {
     </div>
   </div>
 </div>
-              <div className="w-1/2 mt-64">
-                {/* Additional details or content for the selected lesson */}
-                <p>Additional details or content for the selected lesson can be added here.</p>
-              </div>
+              
             </div>
           </div>
         ) : (
