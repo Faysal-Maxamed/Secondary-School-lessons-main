@@ -10,7 +10,7 @@ const coursesData = [
   { id: 6, name: 'Biology Course', description: 'Understand the complexities of Biology with our comprehensive course.' },
   { id: 7, name: 'Math Course', description: 'Master Mathematics with lessons covering various topics.' },
   { id: 8, name: 'Geography Course', description: 'Understand Geography with lessons covering various topics.' },
-  { id: 9, name: 'Islamic Course', description: 'Understand about Islamic regions topics and more lessons about Islamic learn.' }
+
 ];
 
 

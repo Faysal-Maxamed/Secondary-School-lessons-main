@@ -23,18 +23,7 @@ const CourseDetails = () => {
 
   return (
     <div className="container mx-auto p-4 my-8">
-      <h2 className="text-3xl font-bold mb-8">Course {courseId} Lessons</h2>
-      <div className="space-y-4">
-        {lessons.map((lesson, index) => (
-          <Link
-            key={index}
-            to={`/courses/${courseId}/lesson/${lesson.id}`}
-            className="block p-4 bg-yellow-200 rounded-lg hover:bg-yellow-300 hover:shadow-lg transition"
-          >
-            {lesson.title}
-          </Link>
-        ))}
-      </div>
+     
     </div>
   );
 };
