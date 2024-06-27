@@ -16,41 +16,7 @@ import lesson4English from "../video/this.mp4";
 import lesson5English from "../video/this.mp4";
 import lesson6English from "../video/this.mp4";
 // End import About Course 2 English
-// start import About Course 3 Physics
-import lesson1Physics from "../video/this.mp4";
-import lesson2Physics  from "../video/math.chp1.mp4";
-import lesson3Physics  from "../video/this.mp4";
-import lesson4Physics  from "../video/this.mp4";
-import lesson5Physics  from "../video/this.mp4";
-import lesson6Physics  from "../video/this.mp4";
-import lesson7Physics  from "../video/this.mp4";
-// End import About Course 3 Physics
-// start import About Course 4 Chemestiry
-import lesson1Chemistry from "../video/this.mp4";
-import lesson2Chemistry  from "../video/math.chp1.mp4";
-import lesson3Chemistry  from "../video/this.mp4";
-import lesson4Chemistry  from "../video/this.mp4";
-import lesson5Chemistry  from "../video/this.mp4";
-import lesson6Chemistry  from "../video/this.mp4";
-import lesson7Chemistry  from "../video/this.mp4";
-// End import About Course 4 Chemestiry
-// start import About Course 5 History
-import lesson1History from "../video/this.mp4";
-import lesson2History  from "../video/math.chp1.mp4";
-import lesson3History  from "../video/this.mp4";
-import lesson4History  from "../video/this.mp4";
-import lesson5History  from "../video/this.mp4";
-// End import About Course 5 History
-// start import About Course 6 Biology
-import Lesson1Biology from "../video/this.mp4";
-import Lesson2Biology  from "../video/math.chp1.mp4";
-import Lesson3Biology  from "../video/this.mp4";
-import Lesson4Biology  from "../video/this.mp4";
-import Lesson5Biology  from "../video/this.mp4";
-import Lesson6Biology  from "../video/this.mp4";
-import Lesson7Biology  from "../video/this.mp4";
-// End import About Course 6 Biology
-// start import About Course 7 Math
+// start import About Course 3 Math
 import lesson1Math from "../video/this.mp4";
 import lesson2Math  from "../video/math.chp1.mp4";
 import lesson3Math  from "../video/this.mp4";
@@ -60,7 +26,42 @@ import lesson6Math  from "../video/this.mp4";
 import lesson7Math  from "../video/this.mp4";
 import lesson8Math  from "../video/this.mp4";
 import lesson9Math  from "../video/this.mp4";
-// End import About Course  7 Math
+// End import About Course  3 Math
+// start import About Course 4 Physics
+import lesson1Physics from "../video/this.mp4";
+import lesson2Physics  from "../video/math.chp1.mp4";
+import lesson3Physics  from "../video/this.mp4";
+import lesson4Physics  from "../video/this.mp4";
+import lesson5Physics  from "../video/this.mp4";
+import lesson6Physics  from "../video/this.mp4";
+import lesson7Physics  from "../video/this.mp4";
+// End import About Course 4 Physics
+// start import About Course 5 Chemestiry
+import lesson1Chemistry from "../video/this.mp4";
+import lesson2Chemistry  from "../video/math.chp1.mp4";
+import lesson3Chemistry  from "../video/this.mp4";
+import lesson4Chemistry  from "../video/this.mp4";
+import lesson5Chemistry  from "../video/this.mp4";
+import lesson6Chemistry  from "../video/this.mp4";
+import lesson7Chemistry  from "../video/this.mp4";
+// End import About Course 5 Chemestiry
+// start import About Course 6 History
+import lesson1History from "../video/this.mp4";
+import lesson2History  from "../video/math.chp1.mp4";
+import lesson3History  from "../video/this.mp4";
+import lesson4History  from "../video/this.mp4";
+import lesson5History  from "../video/this.mp4";
+// End import About Course 6 History
+// start import About Course 7 Biology
+import Lesson1Biology from "../video/this.mp4";
+import Lesson2Biology  from "../video/math.chp1.mp4";
+import Lesson3Biology  from "../video/this.mp4";
+import Lesson4Biology  from "../video/this.mp4";
+import Lesson5Biology  from "../video/this.mp4";
+import Lesson6Biology  from "../video/this.mp4";
+import Lesson7Biology  from "../video/this.mp4";
+// End import About Course 7 Biology
+
 // start import About Course 8 geography
 import Lesson1Geo from "../video/this.mp4";
 import Lesson2Geo  from "../video/math.chp1.mp4";
