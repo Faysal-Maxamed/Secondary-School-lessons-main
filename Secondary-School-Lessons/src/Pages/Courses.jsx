@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 const coursesData = [
   { id: 1, name: 'دورة اللغة العربية', description: 'ستتعلم في هذه الدورة جميع دروس اللغة العربية لجميع صفوف المرحلة الثانوية' },
   { id: 2, name: 'English Course', description: 'In this course you will learn all English lessons of all classes of the secondary school' },
-  { id: 3, name: 'Physics Course', description: 'Learn the fundamentals of Physics for secondary school.' },
-  { id: 4, name: 'Chemistry Course', description: 'Explore the principles of Chemistry through detailed lessons.' },
-  { id: 5, name: 'History Course', description: 'Dive into the important events and figures in History.' },
-  { id: 6, name: 'Biology Course', description: 'Understand the complexities of Biology with our comprehensive course.' },
-  { id: 7, name: 'Math Course', description: 'Master Mathematics with lessons covering various topics.' },
+  { id: 3, name: 'Math Course', description: 'Master Mathematics with lessons covering various topics.' },
+  { id: 4, name: 'Physics Course', description: 'Learn the fundamentals of Physics for secondary school.' },
+  { id: 5, name: 'Chemistry Course', description: 'Explore the principles of Chemistry through detailed lessons.' },
+  { id: 6, name: 'History Course', description: 'Dive into the important events and figures in History.' },
+  { id: 7, name: 'Biology Course', description: 'Understand the complexities of Biology with our comprehensive course.' },
   { id: 8, name: 'Geography Course', description: 'Understand Geography with lessons covering various topics.' },
 
 ];
