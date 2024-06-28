@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FaPlayCircle } from 'react-icons/fa';
+import { FaHome} from 'react-icons/fa';
+
 // start import About Course  1 Arabic 
 import lesson1Arabic from "../video/this.mp4";
 import lesson2Arabic from "../video/math.chp1.mp4";
@@ -169,7 +171,9 @@ const Lesson = () => {
           className="text-gray-600 hover:text-gray-900 mb-4"
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         >
-          <i className={`fas fa-${isSidebarOpen ? 'chevron-left' : 'chevron-right'}`}></i>
+           <div>
+      <FaHome />
+    </div>
         </button>
         {isSidebarOpen && (
           <div>
