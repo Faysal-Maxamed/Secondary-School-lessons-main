@@ -10,7 +10,8 @@ const Profile = ({ user, setUser }) => {
     district: '',
     school: '',
     class: '',
-    avatar: null
+    avatar: null,
+    isAdmin: false
   });
 
   useEffect(() => {
@@ -24,7 +25,8 @@ const Profile = ({ user, setUser }) => {
         district: user.district,
         school: user.school,
         class: user.class,
-        avatar: user.avatar
+        avatar: user.avatar,
+        isAdmin: user.isAdmin || false
       });
     }
   }, [user]);
@@ -33,7 +35,7 @@ const Profile = ({ user, setUser }) => {
     if (e.target.files && e.target.files[0]) {
       setFormData({
         ...formData,
-        avatar: URL.createObjectURL(e.target.files[0])
+        avatar: URL.createObjectURL(e.target.files[0]),
       });
     }
   };
@@ -43,33 +45,11 @@ const Profile = ({ user, setUser }) => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Check if any field is blank
-    for (let key in formData) {
-      if (formData[key] === '' || formData[key] === null) {
-        alert('All fields must be filled out');
-        return;
-      }
-    }
-    setUser(formData);
-    localStorage.setItem('user', JSON.stringify(formData));
-    alert('Profile updated successfully');
-  };
-
-  const handleDeleteUser = () => {
-    if (window.confirm('Are you sure you want to delete this user?')) {
-      setUser(null);
-      localStorage.removeItem('user');
-      alert('User deleted successfully');
-    }
-  };
-
   return (
-    <div className="container mx-auto p-4 my-8">
-      <div className="bg-gray-600 p-8 rounded-lg shadow-md max-w-md mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Profile</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4">
+      <div className="max-w-md w-full bg-gray-600 p-8 rounded-lg shadow-md">
+        <h2 className="text-3xl font-bold text-white mb-8 text-center">Profile</h2>
+        <form className="space-y-6">
           <div className="flex flex-col items-center">
             <div
               className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-200 hover:bg-gray-300 cursor-pointer"
@@ -89,7 +69,7 @@ const Profile = ({ user, setUser }) => {
             </div>
           </div>
           <div>
-            <label className="block mb-2 font-bold" htmlFor="fullName">Full Name</label>
+            <label className="block mb-2 font-bold text-white" htmlFor="fullName">Full Name</label>
             <input
               className="w-full p-2 border border-gray-300 rounded"
               type="text"
@@ -100,20 +80,60 @@ const Profile = ({ user, setUser }) => {
               required
             />
           </div>
+          {!formData.isAdmin && (
+            <>
+              <div>
+                <label className="block mb-2 font-bold text-white" htmlFor="age">Age</label>
+                <input
+                  className="w-full p-2 border border-gray-300 rounded"
+                  type="number"
+                  id="age"
+                  name="age"
+                  value={formData.age}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label className="block mb-2 font-bold text-white" htmlFor="district">District</label>
+                <input
+                  className="w-full p-2 border border-gray-300 rounded"
+                  type="text"
+                  id="district"
+                  name="district"
+                  value={formData.district}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label className="block mb-2 font-bold text-white" htmlFor="school">School</label>
+                <input
+                  className="w-full p-2 border border-gray-300 rounded"
+                  type="text"
+                  id="school"
+                  name="school"
+                  value={formData.school}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label className="block mb-2 font-bold text-white" htmlFor="class">Class</label>
+                <input
+                  className="w-full p-2 border border-gray-300 rounded"
+                  type="text"
+                  id="class"
+                  name="class"
+                  value={formData.class}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </>
+          )}
           <div>
-            <label className="block mb-2 font-bold" htmlFor="age">Age</label>
-            <input
-              className="w-full p-2 border border-gray-300 rounded"
-              type="number"
-              id="age"
-              name="age"
-              value={formData.age}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label className="block mb-2 font-bold" htmlFor="address">Address</label>
+            <label className="block mb-2 font-bold text-white" htmlFor="address">Address</label>
             <input
               className="w-full p-2 border border-gray-300 rounded"
               type="text"
@@ -125,7 +145,7 @@ const Profile = ({ user, setUser }) => {
             />
           </div>
           <div>
-            <label className="block mb-2 font-bold" htmlFor="email">Email</label>
+            <label className="block mb-2 font-bold text-white" htmlFor="email">Email</label>
             <input
               className="w-full p-2 border border-gray-300 rounded"
               type="email"
@@ -137,7 +157,7 @@ const Profile = ({ user, setUser }) => {
             />
           </div>
           <div>
-            <label className="block mb-2 font-bold" htmlFor="phone">Phone</label>
+            <label className="block mb-2 font-bold text-white" htmlFor="phone">Phone</label>
             <input
               className="w-full p-2 border border-gray-300 rounded"
               type="tel"
@@ -148,50 +168,7 @@ const Profile = ({ user, setUser }) => {
               required
             />
           </div>
-          <div>
-            <label className="block mb-2 font-bold" htmlFor="district">District</label>
-            <input
-              className="w-full p-2 border border-gray-300 rounded"
-              type="text"
-              id="district"
-              name="district"
-              value={formData.district}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label className="block mb-2 font-bold" htmlFor="school">School</label>
-            <input
-              className="w-full p-2 border border-gray-300 rounded"
-              type="text"
-              id="school"
-              name="school"
-              value={formData.school}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label className="block mb-2 font-bold" htmlFor="class">Class</label>
-            <input
-              className="w-full p-2 border border-gray-300 rounded"
-              type="text"
-              id="class"
-              name="class"
-              value={formData.class}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <button type="submit" className="w-full px-4 py-2 bg-blue-500 text-white rounded">Update Profile</button>
         </form>
-        <button
-          onClick={handleDeleteUser}
-          className="w-full px-4 py-2 mt-4 bg-red-500 text-white rounded"
-        >
-          Delete User
-        </button>
       </div>
     </div>
   );
