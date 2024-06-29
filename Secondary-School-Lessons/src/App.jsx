@@ -90,7 +90,7 @@ const App = () => {
 
           </Routes>
         </main>
-        {window.location.pathname === '/contact-us' && <Footer />}
+        {/* {window.location.pathname === '/contact-us' && <Footer />} */}
       </div>
     </Router>
   );
