@@ -1,5 +1,3 @@
-// App.js
-
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Header from './Components/Header';
@@ -22,7 +20,6 @@ import Form3 from './Pages/Form3';
 import Form4 from './Pages/Form4';
 import F1Lessons from './Pages/F1Lessons'; // Import F1Lessons component
 import F3Lessons from './Pages/F3Lessons'; // Import F3Lessons component
-import F4Lessons from './Pages/F4Lessons';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -103,7 +100,6 @@ const App = () => {
             <Route path="/form3" element={user ? <Form3 /> : <Navigate to="/login" />} />
             <Route path="/form3/:courseId" element={user ? <F3Lessons /> : <Navigate to="/login" />} /> {/* Route to F3Lessons */}
             <Route path="/form4" element={user ? <Form4 /> : <Navigate to="/login" />} />
-            <Route path="/form4/:courseId" element={user ? <F4Lessons /> : <Navigate to="/login" />} /> {/* Route to F3Lessons */}
             {user && user.isAdmin && <Route path="/admin" element={<Admin users={users} setUsers={setUsers} />} />}
           </Routes>
         </main>
