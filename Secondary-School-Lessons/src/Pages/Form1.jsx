@@ -20,7 +20,7 @@ const Form1 = () => {
         {form1Data.map((course) => (
           <Link
             key={course.id}
-            to={`/form1/${course.id}/lesson/1`} // Directly link to the first lesson of the course
+            to={`/form1/${course.id}/lessons`} // Link to the F1Lessons page
             className="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300"
           >
             <div className="p-6">

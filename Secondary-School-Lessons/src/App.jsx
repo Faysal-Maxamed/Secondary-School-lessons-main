@@ -14,9 +14,11 @@ import ContactUs from './Pages/ContactUs';
 import Admin from './Pages/Admin';
 import RegisterAdmin from './Components/RegisterAdmin';
 import Dashboard from './Pages/Dashboard';
-import Form2 from './Pages/Form2'; // Import Form2 component
-import Form3 from './Pages/Form3'; // Import Form3 component
-import Form4  from './Pages/Form4';
+import Form2 from './Pages/Form2';
+import F2Lessons from './Pages/F2Lessons'; // Import F2Lessons component
+import Form3 from './Pages/Form3';
+import Form4 from './Pages/Form4';
+import F1Lessons from './Pages/F1Lessons'; // Import F1Lessons component
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -86,18 +88,20 @@ const App = () => {
             <Route path="/about-us" element={user ? <AboutUs /> : <Navigate to="/login" />} />
             <Route path="/courses" element={user ? <Courses /> : <Navigate to="/login" />} />
             <Route path="/courses/:courseId" element={user ? <CourseDetails /> : <Navigate to="/login" />} />
-            <Route path="/courses/:courseId/lesson/:lessonId" element={user ? <Lesson /> : <Navigate to="/login" />} />
+            <Route path="/courses/:courseId/F1Lessons/:lessonId" element={user ? <Lesson /> : <Navigate to="/login" />} />
+            <Route path="/form1/:courseId/lessons" element={user ? <F1Lessons /> : <Navigate to="/login" />} />
             <Route path="/profile" element={user ? <Profile user={user} setUser={setUser} /> : <Navigate to="/login" />} />
             <Route path="/contact-us" element={user ? <ContactUs /> : <Navigate to="/login" />} />
             <Route path="/RegisterAdmin" element={<RegisterAdmin onRegister={handleRegister} />} />
             <Route path="/dashboard" element={<Dashboard user={user} onLogout={handleLogout} />} />
-            <Route path="/form2" element={user ? <Form2 /> : <Navigate to="/login" />} /> {/* New route for Form2 */}
-            <Route path="/form3" element={user ? <Form3 /> : <Navigate to="/login" />} /> {/* New route for Form3 */}
-            <Route path="/form4" element={user ? <Form4 /> : <Navigate to="/login" />} /> {/* New route for Form3 */}
+            <Route path="/form2" element={user ? <Form2 /> : <Navigate to="/login" />} />
+            <Route path="/form2/:courseId" element={user ? <F2Lessons /> : <Navigate to="/login" />} /> {/* Route to F2Lessons */}
+            <Route path="/form3" element={user ? <Form3 /> : <Navigate to="/login" />} />
+            <Route path="/form4" element={user ? <Form4 /> : <Navigate to="/login" />} />
             {user && user.isAdmin && <Route path="/admin" element={<Admin users={users} setUsers={setUsers} />} />}
           </Routes>
         </main>
-        
+        <Footer /> {/* Add the Footer component */}
       </div>
     </Router>
   );

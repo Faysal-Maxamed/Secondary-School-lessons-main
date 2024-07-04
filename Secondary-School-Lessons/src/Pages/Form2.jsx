@@ -9,7 +9,6 @@ const form2Data = [
   { id: 5, name: 'Chemistry Course', description: 'Explore the principles of Chemistry through detailed lessons.' },
   { id: 6, name: 'History Course', description: 'Dive into the important events and figures in History.' },
   { id: 7, name: 'Biology Course', description: 'Understand the complexities of Biology with our comprehensive course.' },
- 
 ];
 
 const Form2 = () => {
@@ -20,8 +19,8 @@ const Form2 = () => {
         {form2Data.map((course) => (
           <Link
             key={course.id}
-            to={`/form2/${course.id}/lesson/1`} // Directly link to the first lesson of the course
-            className="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+            to={`/form2/${course.id}`} // Link to the course detail page (F2Lessons) with course ID
+            className="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 block"
           >
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{course.name}</h3>
