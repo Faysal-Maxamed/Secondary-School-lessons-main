@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faHome, faBook, faUsers, faUserPlus, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faHome, faBook, faUsers, faUserPlus, faSignOutAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 import Profile from '../Components/Profile';
 import RegisterAdmin from '../Components/RegisterAdmin';
 import UsersList from '../Components/UsersList';
@@ -13,6 +13,7 @@ const Dashboard = ({ user, setUser, onLogout }) => {
   const [showUsers, setShowUsers] = useState(false);
   const [showRegisterAdmin, setShowRegisterAdmin] = useState(false);
   const [users, setUsers] = useState([]);
+  const [isSidebarExpanded, setIsSidebarExpanded] = useState(true);
 
   const handleLogout = () => {
     if (window.confirm('Are you sure you want to log out?')) {
@@ -67,12 +68,19 @@ const Dashboard = ({ user, setUser, onLogout }) => {
     navigate('/form4');
   };
 
+  const toggleSidebar = () => {
+    setIsSidebarExpanded(!isSidebarExpanded);
+  };
+
   return (
     <div className="flex min-h-screen">
-      <div className="bg-gray-600 text-white p-8 w-64 flex flex-col items-center">
+      <div className={`bg-gray-600 text-white p-4 ${isSidebarExpanded ? 'w-64' : 'w-20'} transition-all duration-300 flex flex-col items-center`}>
+        <button onClick={toggleSidebar} className="text-white mb-4 self-end">
+          <FontAwesomeIcon icon={faBars} className="text-xl" />
+        </button>
         <div className="text-center mb-8">
           <FontAwesomeIcon icon={faUser} className="text-white text-4xl mb-4" />
-          {user && (
+          {isSidebarExpanded && user && (
             <>
               <h3>{user.name}</h3>
               <p>{user.role}</p>
@@ -82,12 +90,12 @@ const Dashboard = ({ user, setUser, onLogout }) => {
         </div>
         <nav className="w-full">
           <button onClick={() => navigate('/Home')} className="block w-full text-left p-2 text-lg font-medium transition duration-300 rounded-lg">
-            <FontAwesomeIcon icon={faHome} className="mr-2" /> Home
+            <FontAwesomeIcon icon={faHome} className="mr-2" /> {isSidebarExpanded && 'Home'}
           </button>
           <button onClick={handleCoursesClick} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-            <FontAwesomeIcon icon={faBook} className="mr-2" /> Courses
+            <FontAwesomeIcon icon={faBook} className="mr-2" /> {isSidebarExpanded && 'Courses'}
           </button>
-          {showCourses && (
+          {showCourses && isSidebarExpanded && (
             <>
               <button onClick={() => navigate('/courses')} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
                 Form 1 Course
@@ -104,20 +112,20 @@ const Dashboard = ({ user, setUser, onLogout }) => {
             </>
           )}
           <button onClick={handleProfileClick} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-            <FontAwesomeIcon icon={faUser} className="mr-2" /> Profile
+            <FontAwesomeIcon icon={faUser} className="mr-2" /> {isSidebarExpanded && 'Profile'}
           </button>
           {user?.isAdmin && (
             <>
               <button onClick={handleUsersClick} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-                <FontAwesomeIcon icon={faUsers} className="mr-2" /> See Users
+                <FontAwesomeIcon icon={faUsers} className="mr-2" /> {isSidebarExpanded && 'See Users'}
               </button>
               <button onClick={handleRegisterAdminClick} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-                <FontAwesomeIcon icon={faUserPlus} className="mr-2" /> Register Admin
+                <FontAwesomeIcon icon={faUserPlus} className="mr-2" /> {isSidebarExpanded && 'Register Admin'}
               </button>
             </>
           )}
           <button onClick={handleLogout} className="block w-full text-left p-2 text-lg font-medium text-red-500 transition duration-300 mt-auto">
-            <FontAwesomeIcon icon={faSignOutAlt} className="mr-2" /> Logout
+            <FontAwesomeIcon icon={faSignOutAlt} className="mr-2" /> {isSidebarExpanded && 'Logout'}
           </button>
         </nav>
       </div>
