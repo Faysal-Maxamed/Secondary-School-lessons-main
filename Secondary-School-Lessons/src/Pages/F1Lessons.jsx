@@ -18,6 +18,10 @@ const lessonsData = {
     { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 English', videoUrl: 'https://www.youtube.com/watch?v=uhFXhF9CJc8&list=PLA2sIXNgNKf7eP9-J6G5LSpIuvf9TBQXC&index=4&pp=iAQB' },
     { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 English', videoUrl: 'https://www.youtube.com/watch?v=P9I8QDvPp7s&list=PLA2sIXNgNKf7eP9-J6G5LSpIuvf9TBQXC&index=5&pp=iAQB' },
     { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 English', videoUrl: 'https://www.youtube.com/watch?v=e9tngbq2CLY&list=PLA2sIXNgNKf7eP9-J6G5LSpIuvf9TBQXC&index=6&pp=iAQB' },
+    
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 English', videoUrl: '' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 English', videoUrl: '' },
+    { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9 English', videoUrl: '' },
   ],
   // Add similar structure for other courses if needed
 };
