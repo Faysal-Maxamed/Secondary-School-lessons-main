@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
-// Placeholder images (replace with actual image paths or URLs)
 import arabicImage from '../images/member1.jpeg';
 import englishImage from '../images/member1.jpeg';
 import mathImage from '../images/member1.jpeg';
@@ -85,7 +84,7 @@ const Form2 = () => {
 
       <div className="mb-8">
         <Slider {...sliderSettings} className="relative">
-          {firstHalf.map((course, index) => (
+          {firstHalf.map((course) => (
             <div key={course.id} className="px-4">
               <Link
                 to={`/form2/${course.id}/lessons`}
@@ -111,7 +110,7 @@ const Form2 = () => {
       {secondHalf.length > 0 && (
         <div>
           <Slider {...sliderSettings} className="relative">
-            {secondHalf.map((course, index) => (
+            {secondHalf.map((course) => (
               <div key={course.id} className="px-4">
                 <Link
                   to={`/form2/${course.id}/lessons`}

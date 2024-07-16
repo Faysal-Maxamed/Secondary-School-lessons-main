@@ -108,9 +108,9 @@ const App = () => {
             <Route path="/RegisterAdmin" element={<RegisterAdmin onRegister={handleRegister} />} />
             <Route path="/dashboard" element={<Dashboard user={user} setUser={setUser} onLogout={handleLogout} />} />
             <Route path="/form2" element={user ? <Form2 /> : <Navigate to="/login" />} />
-            <Route path="/form2/:courseId" element={user ? <F2Lessons /> : <Navigate to="/login" />} /> {/* Route to F2Lessons =*/}
+            <Route path="/form2/:courseId/lessons" element={user ? <F2Lessons /> : <Navigate to="/login" />} /> {/* Route to F2Lessons =*/}
             <Route path="/form3" element={user ? <Form3 /> : <Navigate to="/login" />} />
-            <Route path="/form3/:courseId" element={user ? <F3Lessons /> : <Navigate to="/login" />} /> {/* Route to F3Lessons */}
+            <Route path="/form3/:courseId/lessons" element={user ? <F3Lessons /> : <Navigate to="/login" />} /> {/* Route to F3Lessons */}
             <Route path="/form4" element={user ? <Form4 /> : <Navigate to="/login" />} />
             {user && user.isAdmin && <Route path="/admin" element={<Admin users={users} setUsers={setUsers} />} />}
           </Routes>

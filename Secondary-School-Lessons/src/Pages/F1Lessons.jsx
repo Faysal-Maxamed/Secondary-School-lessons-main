@@ -4,12 +4,15 @@ import { FaPlayCircle, FaBars } from 'react-icons/fa'; // Assuming FaBars is the
 
 const lessonsData = {
   1: [
-    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Arabic', videoUrl: 'https://www.youtube.com/watch?list=PLA2sIXNgNKf5o-qzU7yrC7USJhq__1iDj&v=jndoZU9fpPc&feature=youtu.be' },
-    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Arabic', videoUrl: 'https://www.youtube.com/watch?list=PLA2sIXNgNKf5o-qzU7yrC7USJhq__1iDj&v=dDYBPCUgOFU&feature=youtu.be' },
-    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Arabic', videoUrl: 'https://www.youtube.com/watch?list=PLA2sIXNgNKf5o-qzU7yrC7USJhq__1iDj&v=RSbS8APrfwc&feature=youtu.be' },
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Arabic', videoUrl: 'https://www.youtube.com/watch?v=O7OXqETTZRU&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Arabic', videoUrl: 'https://www.youtube.com/watch?v=jdxA0EeAH3o&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Arabic', videoUrl: 'https://www.youtube.com/watch?v=9bXLAbZIhzQ&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Arabic', videoUrl: 'https://www.youtube.com/watch?v=F54keQjGsgs&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Arabic', videoUrl: 'https://www.youtube.com/watch?v=S0MZ6G5ODeY&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Arabic', videoUrl: 'https://www.youtube.com/watch?v=Gq9_KMST4CQ&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=6&pp=iAQB' },
   ],
   2: [
-    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 English', videoUrl: 'https://www.youtube.com/watch?list=PLA2sIXNgNKf5o-qzU7yrC7USJhq__1iDj&v=jndoZU9fpPc&feature=youtu.be' },
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 English', videoUrl: '' },
     { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 English', videoUrl: 'https://www.youtube.com/watch?list=PLA2sIXNgNKf5o-qzU7yrC7USJhq__1iDj&v=jndoZU9fpPc&feature=youtu.be' },
     { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 English', videoUrl: 'https://www.youtube.com/watch?list=PLA2sIXNgNKf5o-qzU7yrC7USJhq__1iDj&v=jndoZU9fpPc&feature=youtu.be' },
   ],
