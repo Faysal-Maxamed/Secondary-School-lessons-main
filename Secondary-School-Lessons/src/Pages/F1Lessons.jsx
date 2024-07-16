@@ -15,6 +15,9 @@ const lessonsData = {
     { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 English', videoUrl: 'https://www.youtube.com/watch?v=H1d1M7-_yJw&list=PLA2sIXNgNKf7eP9-J6G5LSpIuvf9TBQXC&index=1&pp=iAQB' },
     { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 English', videoUrl: 'https://www.youtube.com/watch?v=wxPQiTbqkTc&list=PLA2sIXNgNKf7eP9-J6G5LSpIuvf9TBQXC&index=2&pp=iAQB' },
     { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 English', videoUrl: 'https://www.youtube.com/watch?v=fKljmGCLz0A&list=PLA2sIXNgNKf7eP9-J6G5LSpIuvf9TBQXC&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 English', videoUrl: 'https://www.youtube.com/watch?v=uhFXhF9CJc8&list=PLA2sIXNgNKf7eP9-J6G5LSpIuvf9TBQXC&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 English', videoUrl: 'https://www.youtube.com/watch?v=P9I8QDvPp7s&list=PLA2sIXNgNKf7eP9-J6G5LSpIuvf9TBQXC&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 English', videoUrl: 'https://www.youtube.com/watch?v=e9tngbq2CLY&list=PLA2sIXNgNKf7eP9-J6G5LSpIuvf9TBQXC&index=6&pp=iAQB' },
   ],
   // Add similar structure for other courses if needed
 };
