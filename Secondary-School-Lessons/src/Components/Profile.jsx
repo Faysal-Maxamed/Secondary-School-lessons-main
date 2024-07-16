@@ -1,4 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+// Add the icons to the library
+library.add(faUser);
 
 const Profile = ({ user, setUser }) => {
   const [formData, setFormData] = useState({
@@ -31,42 +37,20 @@ const Profile = ({ user, setUser }) => {
     }
   }, [user]);
 
-  const handleImageChange = (e) => {
-    if (e.target.files && e.target.files[0]) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setFormData({ ...formData, avatar: e.target.result });
-      };
-      reader.readAsDataURL(e.target.files[0]);
-    }
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    setUser({ ...user, [name]: value });
   };
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4">
-      <div className="max-w-lg w-3/6 bg-white p-8 rounded-lg shadow-md">
+      <div className="max-w-lg w-full bg-white p-8 rounded-lg shadow-md">
         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Profile</h2>
         <form className="space-y-6">
           <div className="flex flex-col items-center">
-            <div
-              className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-200 hover:bg-gray-300 cursor-pointer mb-4"
-              onClick={() => document.getElementById('fileInput').click()}
-            >
-              {formData.avatar ? (
-                <img src={formData.avatar} alt="Profile" className="w-full h-full object-cover" />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-gray-500">No Image</div>
-              )}
-              <input
-                type="file"
-                id="fileInput"
-                onChange={handleImageChange}
-                className="hidden"
-              />
+            <div className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-200 hover:bg-gray-300 cursor-pointer mb-4 flex items-center justify-center">
+              <FontAwesomeIcon icon={faUser} className="text-gray-500 text-6xl" />
             </div>
             <div>
               <label className="block mb-2 font-bold text-gray-700" htmlFor="fullName">Full Name</label>

@@ -35,33 +35,45 @@ const App = () => {
   const handleLogin = (email, password, userType) => {
     const adminEmail = '123@gmail.com';
     const adminPassword = '123';
+    const admins = JSON.parse(localStorage.getItem('admins')) || [];
 
-    if (userType === 'admin' && email === adminEmail && password === adminPassword) {
-      const adminUser = {
-        fullName: 'Pheyzal',
-        age: 21,
-        address: 'Taleh',
-        email: adminEmail,
-        phone: '0614388477',
-        district: 'hodan',
-        school: 'Ablaal',
-        class: 'F4',
-        isAdmin: true
-      };
-      setUser(adminUser);
-      localStorage.setItem('user', JSON.stringify(adminUser));
+    if (userType === 'admin') {
+      if (email === adminEmail && password === adminPassword) {
+        const adminUser = {
+          fullName: 'Pheyzal',
+          age: 21,
+          address: 'Taleh',
+          email: adminEmail,
+          phone: '0614388477',
+          district: 'hodan',
+          school: 'Ablaal',
+          class: 'F4',
+          isAdmin: true
+        };
+        setUser(adminUser);
+        localStorage.setItem('user', JSON.stringify(adminUser));
+        return true; // Allow navigation
+      } else {
+        const registeredAdmin = admins.find((admin) => admin.email === email && admin.password === password);
+        if (registeredAdmin) {
+          const adminUser = { ...registeredAdmin, isAdmin: true };
+          setUser(adminUser);
+          localStorage.setItem('user', JSON.stringify(adminUser));
+          return true; // Allow navigation
+        }
+      }
     } else {
       const registeredUser = users.find((user) => user.email === email && user.password === password);
       if (registeredUser) {
         const normalUser = { ...registeredUser, isAdmin: false };
         setUser(normalUser);
         localStorage.setItem('user', JSON.stringify(normalUser));
-      } else {
-        alert('Invalid credentials');
-        return false; // Prevent navigation
+        return true; // Allow navigation
       }
     }
-    return true; // Allow navigation
+
+    alert('Invalid credentials');
+    return false; // Prevent navigation
   };
 
   const handleLogout = () => {
@@ -94,9 +106,9 @@ const App = () => {
             <Route path="/profile" element={user ? <Profile user={user} setUser={setUser} /> : <Navigate to="/login" />} />
             <Route path="/contact-us" element={user ? <ContactUs /> : <Navigate to="/login" />} />
             <Route path="/RegisterAdmin" element={<RegisterAdmin onRegister={handleRegister} />} />
-            <Route path="/dashboard" element={<Dashboard user={user} onLogout={handleLogout} />} />
+            <Route path="/dashboard" element={<Dashboard user={user} setUser={setUser} onLogout={handleLogout} />} />
             <Route path="/form2" element={user ? <Form2 /> : <Navigate to="/login" />} />
-            <Route path="/form2/:courseId" element={user ? <F2Lessons /> : <Navigate to="/login" />} /> {/* Route to F2Lessons */}
+            <Route path="/form2/:courseId" element={user ? <F2Lessons /> : <Navigate to="/login" />} /> {/* Route to F2Lessons =*/}
             <Route path="/form3" element={user ? <Form3 /> : <Navigate to="/login" />} />
             <Route path="/form3/:courseId" element={user ? <F3Lessons /> : <Navigate to="/login" />} /> {/* Route to F3Lessons */}
             <Route path="/form4" element={user ? <Form4 /> : <Navigate to="/login" />} />

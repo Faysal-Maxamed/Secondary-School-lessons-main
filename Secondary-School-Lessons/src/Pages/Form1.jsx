@@ -85,7 +85,7 @@ const Form1 = () => {
 
       <div className="mb-8">
         <Slider {...sliderSettings} className="relative">
-          {firstHalf.map((course, index) => (
+          {firstHalf.map((course) => (
             <div key={course.id} className="px-4">
               <Link
                 to={`/form1/${course.id}/lessons`}
@@ -111,7 +111,7 @@ const Form1 = () => {
       {secondHalf.length > 0 && (
         <div>
           <Slider {...sliderSettings} className="relative">
-            {secondHalf.map((course, index) => (
+            {secondHalf.map((course) => (
               <div key={course.id} className="px-4">
                 <Link
                   to={`/form1/${course.id}/lessons`}

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const RegisterAdmin = () => {
+const RegisterAdmin = ({ onRegister }) => {
   const [email, setEmail] = useState('');
   const [number, setNumber] = useState('');
   const [password, setPassword] = useState('');
@@ -19,7 +19,11 @@ const RegisterAdmin = () => {
           adminType,
         };
         // Save admin to local storage
-        localStorage.setItem('admin', JSON.stringify(admin));
+        const admins = JSON.parse(localStorage.getItem('admins')) || [];
+        admins.push(admin);
+        localStorage.setItem('admins', JSON.stringify(admins));
+
+        onRegister(admin);
       }
     } else {
       alert('Please fill in all the fields!');
@@ -27,9 +31,9 @@ const RegisterAdmin = () => {
   };
 
   return (
-    <div className="container w-96 mx-96 mt-24 mt-8 rounded-3xl py-5 shadow-md">
-      <h1 className="text-3xl font-bold mb-4 ml-16">Register Admin</h1>
-      <div className="flex items-center space-x-4 ml-44">
+    <div className="container mx-auto mt-12 p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 max-w-lg bg-white rounded-3xl shadow-md">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">Register Admin</h1>
+      <div className="flex items-center space-x-4 justify-center">
         <label htmlFor="admin-type">Type:</label>
         <select
           id="admin-type"
@@ -37,35 +41,38 @@ const RegisterAdmin = () => {
           onChange={(e) => setAdminType(e.target.value)}
           className="border border-gray-300 px-4 py-2 rounded"
         >
-          <option value="regular">Admin</option>
+          <option value="Admin">Admin</option>
         </select>
       </div>
-      <div className="flex flex-col space-y-4 mt-8 w-2/3 ml-16">
+      <div className="flex flex-col space-y-4 mt-8 w-full">
         <input
           type="email"
-          placeholder="Email"
+          placeholder="Enter Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="border border-gray-300 px-4 py-2 rounded rounded-3xl"
+          className="border border-gray-300 px-4 py-2 rounded-lg"
+          autoComplete="off"
         />
         <input
           type="text"
-          placeholder="Phone Number"
+          placeholder="Enter Phone Number"
           value={number}
           onChange={(e) => setNumber(e.target.value)}
-          className="border border-gray-300 px-4 py-2 rounded rounded-3xl"
+          className="border border-gray-300 px-4 py-2 rounded-lg"
+          autoComplete="off"
         />
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Enter Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="border border-gray-300 px-4 py-2 rounded rounded-3xl"
+          className="border border-gray-300 px-4 py-2 rounded-lg"
+          autoComplete="off"
         />
 
         <button
           onClick={handleRegister}
-          className="bg-gray-600 text-white py-2 px-4 rounded rounded-3xl hover:bg-blue-600"
+          className="bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
         >
           Register
         </button>

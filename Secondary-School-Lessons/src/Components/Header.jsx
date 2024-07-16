@@ -75,12 +75,7 @@ const Header = ({ user, onLogout }) => {
               >
                 About Us
               </Link>
-              <Link
-                to="/courses"
-                className={`block px-4 py-2 text-gray-800 ${getLinkClass('/courses')}`}
-              >
-                Courses
-              </Link>
+            
               <Link
                 to="/contact-us"
                 className={`block px-4 py-2 text-gray-800 ${getLinkClass('/contact-us')}`}
@@ -96,17 +91,10 @@ const Header = ({ user, onLogout }) => {
                     Dashboard
                   </Link>
                   <hr className="my-2" />
-                  <Link to="/profile" className="block px-4 py-2 text-gray-800">
-                    Profile
-                  </Link>
+                
                   {user.isAdmin && (
                     <>
-                      <Link to="/admin" className="block px-4 py-2 text-gray-800">
-                        See Users
-                      </Link>
-                      <Link to="/RegisterAdmin" className="block px-4 py-2 text-gray-800">
-                        Register-Admin
-                      </Link>
+                      
                     </>
                   )}
                   <button
