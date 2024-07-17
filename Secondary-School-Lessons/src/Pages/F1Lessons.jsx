@@ -10,6 +10,8 @@ const lessonsData = {
     { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Arabic', videoUrl: 'https://www.youtube.com/watch?v=F54keQjGsgs&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=4&pp=iAQB' },
     { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Arabic', videoUrl: 'https://www.youtube.com/watch?v=S0MZ6G5ODeY&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=5&pp=iAQB' },
     { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Arabic', videoUrl: 'https://www.youtube.com/watch?v=Gq9_KMST4CQ&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=6&pp=iAQB' },
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 Arabic', videoUrl: 'https://www.youtube.com/watch?v=6hgvOKHcixU&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 Arabic', videoUrl: 'https://www.youtube.com/watch?v=XaIlORuFuPs&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=8&pp=iAQB' },
   ],
   2: [
     { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 English', videoUrl: 'https://www.youtube.com/watch?v=H1d1M7-_yJw&list=PLA2sIXNgNKf7eP9-J6G5LSpIuvf9TBQXC&index=1&pp=iAQB' },
@@ -64,10 +66,42 @@ const lessonsData = {
     { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=hHoPGKZYuLo&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=9&pp=iAQB' },
     { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=p0EQODIKD5Y&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=10&pp=iAQB' },
     { id: 11, title: 'Lesson 11', description: 'Description for Lesson 11  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=_wWAufId38U&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=11&pp=iAQB' },
-
-
- 
   ],
+
+6: [
+  { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 History', videoUrl: 'https://www.youtube.com/watch?v=w3n17OCouyo&list=PLA2sIXNgNKf4G-THC94dPR3IkrzhvEoAq&index=1&pp=iAQB' },
+  { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 History', videoUrl: 'https://www.youtube.com/watch?v=yjdPJvYC_FE&list=PLA2sIXNgNKf4G-THC94dPR3IkrzhvEoAq&index=2&pp=iAQB' },
+  { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 History', videoUrl: 'https://www.youtube.com/watch?v=Y_-A5rIn7Vs&list=PLA2sIXNgNKf4G-THC94dPR3IkrzhvEoAq&index=3&pp=iAQB' },
+  { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 History', videoUrl: 'https://www.youtube.com/watch?v=DftgHZSYR30&list=PLA2sIXNgNKf4G-THC94dPR3IkrzhvEoAq&index=4&pp=iAQB' },
+  { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 History', videoUrl: 'https://www.youtube.com/watch?v=hZ1WFxGbT10&list=PLA2sIXNgNKf4G-THC94dPR3IkrzhvEoAq&index=5&pp=iAQB' },
+  { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 History', videoUrl: 'https://www.youtube.com/watch?v=jgndFem6d3c&list=PLA2sIXNgNKf4G-THC94dPR3IkrzhvEoAq&index=6&pp=iAQB' },
+  { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 History', videoUrl: 'https://www.youtube.com/watch?v=fmMbYYnQl2Q&list=PLA2sIXNgNKf4G-THC94dPR3IkrzhvEoAq&index=7&pp=iAQB' },
+  { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 History', videoUrl: 'https://www.youtube.com/watch?v=hJ-BUeS9HTU&list=PLA2sIXNgNKf4G-THC94dPR3IkrzhvEoAq&index=8&pp=iAQB' },
+],
+7: [
+  { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Biology', videoUrl: 'https://www.youtube.com/watch?v=fKwAmOuYDps&list=PLA2sIXNgNKf5mw5Ek3LJgo5w-t8g15IRv&index=1&pp=iAQB' },
+  { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2  Biology', videoUrl: 'https://www.youtube.com/watch?v=73MouUz_Gzk&list=PLA2sIXNgNKf5mw5Ek3LJgo5w-t8g15IRv&index=2&pp=iAQB' },
+  { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3  Biology', videoUrl: 'https://www.youtube.com/watch?v=QbZVsDtIOMc&list=PLA2sIXNgNKf5mw5Ek3LJgo5w-t8g15IRv&index=3&pp=iAQB' },
+  { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4  Biology', videoUrl: 'https://www.youtube.com/watch?v=gcRNrCaiAo0&list=PLA2sIXNgNKf5mw5Ek3LJgo5w-t8g15IRv&index=4&pp=iAQB' },
+  { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5  Biology', videoUrl: 'https://www.youtube.com/watch?v=wRQLFAjIsEI&list=PLA2sIXNgNKf5mw5Ek3LJgo5w-t8g15IRv&index=5&pp=iAQB' },
+  { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6  Biology', videoUrl: 'https://www.youtube.com/watch?v=aWC8K7J6nbs&list=PLA2sIXNgNKf5mw5Ek3LJgo5w-t8g15IRv&index=6&pp=iAQB' },
+  
+  { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7  Biology', videoUrl: 'https://www.youtube.com/watch?v=P0Gmt3gATJY&list=PLA2sIXNgNKf5mw5Ek3LJgo5w-t8g15IRv&index=7&pp=iAQB' },
+  { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8  Biology', videoUrl: 'https://www.youtube.com/watch?v=4IF3iaLmbn4&list=PLA2sIXNgNKf5mw5Ek3LJgo5w-t8g15IRv&index=8&pp=iAQB' },
+  { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9  Biology', videoUrl: 'https://www.youtube.com/watch?v=3eANR5vhm9E&list=PLA2sIXNgNKf5mw5Ek3LJgo5w-t8g15IRv&index=9&pp=iAQB' },
+  { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10  Biology', videoUrl: 'https://www.youtube.com/watch?v=5a39DwKEL0k&list=PLA2sIXNgNKf5mw5Ek3LJgo5w-t8g15IRv&index=10&pp=iAQB' },
+  { id: 11, title: 'Lesson 11', description: 'Description for Lesson 11  Biology', videoUrl: 'https://www.youtube.com/watch?v=U9MZaxgYvrg&list=PLA2sIXNgNKf5mw5Ek3LJgo5w-t8g15IRv&index=11&pp=iAQB' },
+],
+8: [
+  { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Soomaali', videoUrl: 'https://www.youtube.com/watch?v=QWlUrTI1No4&list=PLA2sIXNgNKf61_JPi4qAo6A5Oqv_lp9Ew&index=1&pp=iAQB' },
+  { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Soomaali', videoUrl: 'https://www.youtube.com/watch?v=wzAQipb8T_w&list=PLA2sIXNgNKf61_JPi4qAo6A5Oqv_lp9Ew&index=2&pp=iAQB' },
+  { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Soomaali', videoUrl: 'https://www.youtube.com/watch?v=zIlBEf34eQk&list=PLA2sIXNgNKf61_JPi4qAo6A5Oqv_lp9Ew&index=3&pp=iAQB' },
+  { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Soomaali', videoUrl: 'https://www.youtube.com/watch?v=SrWuFUWc-K8&list=PLA2sIXNgNKf61_JPi4qAo6A5Oqv_lp9Ew&index=4&pp=iAQB' },
+  { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Soomaali', videoUrl: 'https://www.youtube.com/watch?v=gTHU57kTlv0&list=PLA2sIXNgNKf61_JPi4qAo6A5Oqv_lp9Ew&index=5&pp=iAQB' },
+  { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Soomaali', videoUrl: 'https://www.youtube.com/watch?v=Eh1Bawy4xi8&list=PLA2sIXNgNKf61_JPi4qAo6A5Oqv_lp9Ew&index=6&pp=iAQB' },
+  { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 Soomaali', videoUrl: 'https://www.youtube.com/watch?v=7ONFET0Ty6s&list=PLA2sIXNgNKf61_JPi4qAo6A5Oqv_lp9Ew&index=7&pp=iAQB' },
+  { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 Soomaali', videoUrl: 'https://www.youtube.com/watch?v=BMOz2U7g228&list=PLA2sIXNgNKf61_JPi4qAo6A5Oqv_lp9Ew&index=8&pp=iAQB' },
+],
 };
 
 
