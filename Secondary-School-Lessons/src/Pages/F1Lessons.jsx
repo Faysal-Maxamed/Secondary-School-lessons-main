@@ -23,8 +23,53 @@ const lessonsData = {
     { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 English', videoUrl: 'https://www.youtube.com/watch?v=GaFz89SzlMo&list=PLA2sIXNgNKf7eP9-J6G5LSpIuvf9TBQXC&index=8&pp=iAQB' },
     { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9 English', videoUrl: 'https://www.youtube.com/watch?v=nKNCtFG_s8c&list=PLA2sIXNgNKf7eP9-J6G5LSpIuvf9TBQXC&index=9&pp=iAQB' },
   ],
-  // Add similar structure for other courses if needed
+  3: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=U2trQXLFK9U&list=PLA2sIXNgNKf6KPGQr2Nhdft61ZtCVCcI9&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=Alfe47FS2a4&list=PLA2sIXNgNKf6KPGQr2Nhdft61ZtCVCcI9&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=Ndz0kkBBJU0&list=PLA2sIXNgNKf6KPGQr2Nhdft61ZtCVCcI9&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=5_eLyT8l4wE&list=PLA2sIXNgNKf6KPGQr2Nhdft61ZtCVCcI9&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=-YvA4Rzwotc&list=PLA2sIXNgNKf6KPGQr2Nhdft61ZtCVCcI9&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=D-skV1K6hj0&list=PLA2sIXNgNKf6KPGQr2Nhdft61ZtCVCcI9&index=6&pp=iAQB' },
+    
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=E26zv4fYhls&list=PLA2sIXNgNKf6KPGQr2Nhdft61ZtCVCcI9&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=7qGkQWFyrYM&list=PLA2sIXNgNKf6KPGQr2Nhdft61ZtCVCcI9&index=8&pp=iAQB' },
+    { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=ht6e5WLprvo&list=PLA2sIXNgNKf6KPGQr2Nhdft61ZtCVCcI9&index=9&pp=iAQB' },
+    { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=VTxmpe3NkAo&list=PLA2sIXNgNKf6KPGQr2Nhdft61ZtCVCcI9&index=10&pp=iAQB' },
+  ],
+  4: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Physics', videoUrl: 'https://www.youtube.com/watch?v=c93NB6Bae4g&list=PLG4SdbUov5hSMV24J9XdGhuwVQGnKLkox&index=3&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Physics', videoUrl: 'https://www.youtube.com/watch?v=TgKd-61x-ns&list=PLG4SdbUov5hSMV24J9XdGhuwVQGnKLkox&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Physics', videoUrl: 'https://www.youtube.com/watch?v=UUrh-aft-zo&list=PLG4SdbUov5hSMV24J9XdGhuwVQGnKLkox&index=1&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Physics', videoUrl: 'https://www.youtube.com/watch?v=vayBCbis0ng&list=PLG4SdbUov5hSMV24J9XdGhuwVQGnKLkox&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Physics', videoUrl: 'https://www.youtube.com/watch?v=rOFpTn7fQMY&list=PLG4SdbUov5hSMV24J9XdGhuwVQGnKLkox&index=6&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Physics', videoUrl: 'https://www.youtube.com/watch?v=PpPy6nxM0pE&list=PLG4SdbUov5hSMV24J9XdGhuwVQGnKLkox&index=5&pp=iAQB' },
+    
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 Physics', videoUrl: 'https://www.youtube.com/watch?v=XVtDGCl3TZk&list=PLG4SdbUov5hQsL1PYNm1jtWM6hj0Oe6ck&index=4&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 Physics', videoUrl: 'https://www.youtube.com/watch?v=OK4w_l0LUqs&list=PLG4SdbUov5hQsL1PYNm1jtWM6hj0Oe6ck&index=3&pp=iAQB' },
+    { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9 Physics', videoUrl: 'https://www.youtube.com/watch?v=28eM5Wj0E6U&list=PLG4SdbUov5hQsL1PYNm1jtWM6hj0Oe6ck&index=2&pp=iAQB' },
+    { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10 Physics', videoUrl: 'https://www.youtube.com/watch?v=NEqxVMVDeiQ&list=PLG4SdbUov5hQsL1PYNm1jtWM6hj0Oe6ck&index=1&pp=iAQB' },
+    { id: 11, title: 'Lesson 11', description: 'Description for Lesson 11 Physics', videoUrl: 'https://www.youtube.com/watch?v=cqcYjDIuBEo&list=PLG4SdbUov5hQsL1PYNm1jtWM6hj0Oe6ck&index=5&pp=iAQB' },
+
+  ],
+  5: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Chemistry', videoUrl: 'https://www.youtube.com/watch?v=fAOuXW2fszY&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=7LObY3ITBZw&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=FIx37aKBI1c&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=_WZDj7cZyF8&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=Y1EOt4sMsbU&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=4FK0SCI1O6Q&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=6&pp=iAQB' },
+    
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=tPIdJa9iMws&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=RY1q1_5e93k&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=8&pp=iAQB' },
+    { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=hHoPGKZYuLo&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=9&pp=iAQB' },
+    { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=p0EQODIKD5Y&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=10&pp=iAQB' },
+    { id: 11, title: 'Lesson 11', description: 'Description for Lesson 11  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=_wWAufId38U&list=PLA2sIXNgNKf53Jbufr_Pw2HMgvxkWXucD&index=11&pp=iAQB' },
+
+
+ 
+  ],
 };
+
 
 const convertToEmbedURL = (url) => {
   const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
@@ -64,7 +109,7 @@ const F1Lessons = () => {
       <div className="flex flex-col md:flex-row">
         {/* Sidebar for Desktop */}
         <div className={`md:w-1/4 bg-gray-200 p-4 rounded-lg ${mobileSidebarVisible ? 'block md:hidden' : 'hidden md:block'}`}>
-          <h4 className="text-xl font-semibold mb-4">Other Lessons in this Course:</h4>
+          <h4 className="text-xl font-semibold mt-4 mb-12">Other Lessons in this Course:</h4>
           <div className="space-y-2">
             {lessons.map((lesson) => (
               <button
