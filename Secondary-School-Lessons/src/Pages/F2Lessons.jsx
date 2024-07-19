@@ -67,6 +67,16 @@ const lessonsData = {
     { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=PeOvcNewqrA&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=10&pp=iAQB' },
     { id: 11, title: 'Lesson 11', description: 'Description for Lesson 11  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=uVr5o9czSjU&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=11&pp=iAQB' },
   ],
+  6: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 History', videoUrl: 'https://www.youtube.com/watch?v=ADNFBJ4jtcc&list=PLA2sIXNgNKf7zFI67_PvOsej2JQDAjrCX&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 History', videoUrl: 'https://www.youtube.com/watch?v=CBGgoCfeYZo&list=PLA2sIXNgNKf7zFI67_PvOsej2JQDAjrCX&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 History', videoUrl: 'https://www.youtube.com/watch?v=QYD0kJgmHR4&list=PLA2sIXNgNKf7zFI67_PvOsej2JQDAjrCX&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 History', videoUrl: 'https://www.youtube.com/watch?v=b3sfq-FCEWk&list=PLA2sIXNgNKf7zFI67_PvOsej2JQDAjrCX&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 History', videoUrl: 'https://www.youtube.com/watch?v=mgKZss3qvAU&list=PLA2sIXNgNKf7zFI67_PvOsej2JQDAjrCX&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 History', videoUrl: 'https://www.youtube.com/watch?v=JRH8h-yMq2c&list=PLA2sIXNgNKf7zFI67_PvOsej2JQDAjrCX&index=6&pp=iAQB' },
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 History', videoUrl: 'https://www.youtube.com/watch?v=FByxYeUkAfM&list=PLA2sIXNgNKf7zFI67_PvOsej2JQDAjrCX&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 History', videoUrl: 'https://www.youtube.com/watch?v=P6iFT1XAnr0&list=PLA2sIXNgNKf7zFI67_PvOsej2JQDAjrCX&index=8&pp=iAQB' },
+  ],
   // Add similar structure for other courses if needed
 };
 
@@ -108,7 +118,7 @@ const F2Lessons = () => {
       <div className="flex flex-col md:flex-row">
         {/* Sidebar for Desktop */}
         <div className={`md:w-1/4 bg-gray-200 p-4 rounded-lg ${mobileSidebarVisible ? 'block md:hidden' : 'hidden md:block'}`}>
-          <h4 className="text-xl font-semibold mb-4">Other Lessons in this Course:</h4>
+          <h4 className="text-xl font-semibold mb-12">Other Lessons in this Course :</h4>
           <div className="space-y-2">
             {lessons.map((lesson) => (
               <button
