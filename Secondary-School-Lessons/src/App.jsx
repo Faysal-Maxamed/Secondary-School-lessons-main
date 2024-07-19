@@ -33,7 +33,7 @@ const App = () => {
   }, []);
 
   const handleLogin = (email, password, userType) => {
-    const adminEmail = '123@gmail.com';
+    const adminEmail = 'Admin@gmail.com';
     const adminPassword = '123';
     const admins = JSON.parse(localStorage.getItem('admins')) || [];
 
