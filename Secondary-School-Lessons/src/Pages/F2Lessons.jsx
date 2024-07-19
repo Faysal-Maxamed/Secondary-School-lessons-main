@@ -4,12 +4,15 @@ import { FaPlayCircle, FaBars } from 'react-icons/fa';
 
 const lessonsData = {
   1: [
-    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Arabic', videoUrl: 'https://www.youtube.com/watch?v=O7OXqETTZRU&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=1&pp=iAQB' },
-    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Arabic', videoUrl: 'https://www.youtube.com/watch?v=jdxA0EeAH3o&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=2&pp=iAQB' },
-    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Arabic', videoUrl: 'https://www.youtube.com/watch?v=9bXLAbZIhzQ&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=3&pp=iAQB' },
-    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Arabic', videoUrl: 'https://www.youtube.com/watch?v=F54keQjGsgs&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=4&pp=iAQB' },
-    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Arabic', videoUrl: 'https://www.youtube.com/watch?v=S0MZ6G5ODeY&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=5&pp=iAQB' },
-    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Arabic', videoUrl: 'https://www.youtube.com/watch?v=Gq9_KMST4CQ&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=6&pp=iAQB' },
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Arabic', videoUrl: 'https://www.youtube.com/watch?v=B0LiH8ZDL6E&list=PLA2sIXNgNKf5S6ZPzKN_kQ951Ub0NpYnR&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Arabic', videoUrl: 'https://www.youtube.com/watch?v=H-NUIngNnCA&list=PLA2sIXNgNKf5S6ZPzKN_kQ951Ub0NpYnR&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Arabic', videoUrl: 'https://www.youtube.com/watch?v=giVlfadJBcw&list=PLA2sIXNgNKf5S6ZPzKN_kQ951Ub0NpYnR&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Arabic', videoUrl: 'https://www.youtube.com/watch?v=NyLZhkWbakg&list=PLA2sIXNgNKf5S6ZPzKN_kQ951Ub0NpYnR&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Arabic', videoUrl: 'https://www.youtube.com/watch?v=2fgvyzQU69M&list=PLA2sIXNgNKf5S6ZPzKN_kQ951Ub0NpYnR&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Arabic', videoUrl: 'https://www.youtube.com/watch?v=Ol-VsCENDyk&list=PLA2sIXNgNKf5S6ZPzKN_kQ951Ub0NpYnR&index=6&pp=iAQB' },
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 Arabic', videoUrl: 'https://www.youtube.com/watch?v=CZtqVYZrHU4&list=PLA2sIXNgNKf5S6ZPzKN_kQ951Ub0NpYnR&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 Arabic', videoUrl: 'https://www.youtube.com/watch?v=LA7_-UJW0RU&list=PLA2sIXNgNKf5S6ZPzKN_kQ951Ub0NpYnR&index=8&pp=iAQB' },
+ 
   ],
   2: [
     { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 English', videoUrl: '' },
