@@ -53,6 +53,20 @@ const lessonsData = {
     { id: 11, title: 'Lesson 11', description: 'Description for Lesson 11 Physics', videoUrl: 'https://www.youtube.com/watch?v=qIRdUI3GaOM&list=PLG4SdbUov5hSjKZhU4bHLlo-lBlbGbzUJ&index=7&pp=iAQB' },
 
   ],
+  5: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Chemistry', videoUrl: 'https://www.youtube.com/watch?v=-6EARSMwEZs&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=nL3eSDc8Uh4&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=FdpfSCLnzyg&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=JuxhW1Zsq84&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=KOerf1UvEfc&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=Uvkxnaa2EPU&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=6&pp=iAQB' },
+    
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=k5Z3nJ-x8kI&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=66TZf6gfA_k&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=8&pp=iAQB' },
+    { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=FgWEX3BGtso&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=9&pp=iAQB' },
+    { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=PeOvcNewqrA&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=10&pp=iAQB' },
+    { id: 11, title: 'Lesson 11', description: 'Description for Lesson 11  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=uVr5o9czSjU&list=PLA2sIXNgNKf7QXZZ7s9GlkfutCeBI_v4N&index=11&pp=iAQB' },
+  ],
   // Add similar structure for other courses if needed
 };
 
