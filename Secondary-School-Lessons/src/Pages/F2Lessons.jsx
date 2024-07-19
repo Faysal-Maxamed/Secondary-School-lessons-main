@@ -91,6 +91,16 @@ const lessonsData = {
     { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10  Biology', videoUrl: 'https://www.youtube.com/watch?v=AlranojEWWw&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=10&pp=iAQB' },
     { id: 11, title: 'Lesson 11', description: 'Description for Lesson 11  Biology', videoUrl: 'https://www.youtube.com/watch?v=OnP_l1rKiHs&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=11&pp=iAQB' },
   ],
+  8: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Technology', videoUrl: 'https://www.youtube.com/watch?v=XBQWT0H69i4&list=PLA2sIXNgNKf7tUulyQdFphKDNF1RKrqik&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Technology', videoUrl: 'https://www.youtube.com/watch?v=Fs482ACmUAA&list=PLA2sIXNgNKf7tUulyQdFphKDNF1RKrqik&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Technology', videoUrl: 'https://www.youtube.com/watch?v=0R9dl0TJ300&list=PLA2sIXNgNKf7tUulyQdFphKDNF1RKrqik&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Technology', videoUrl: 'https://www.youtube.com/watch?v=Wh2Yrvh-y-E&list=PLA2sIXNgNKf7tUulyQdFphKDNF1RKrqik&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Technology', videoUrl: 'https://www.youtube.com/watch?v=0d6kHj1AK2E&list=PLA2sIXNgNKf7tUulyQdFphKDNF1RKrqik&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Technology', videoUrl: 'https://www.youtube.com/watch?v=Eh1Bawy4xi8&list=PLA2sIXNgNKf61_JPi4qAo6A5Oqv_lp9Ew&index=6&pp=iAQB' },
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 Technology', videoUrl: 'https://www.youtube.com/watch?v=mKTbcvS1TQM&list=PLA2sIXNgNKf7tUulyQdFphKDNF1RKrqik&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 Technology', videoUrl: 'https://www.youtube.com/watch?v=DZjoYZlWL4E&list=PLA2sIXNgNKf7tUulyQdFphKDNF1RKrqik&index=8&pp=iAQB' },
+  ],
   // Add similar structure for other courses if needed
 };
 
