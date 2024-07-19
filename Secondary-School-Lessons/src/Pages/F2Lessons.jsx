@@ -77,6 +77,20 @@ const lessonsData = {
     { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 History', videoUrl: 'https://www.youtube.com/watch?v=FByxYeUkAfM&list=PLA2sIXNgNKf7zFI67_PvOsej2JQDAjrCX&index=7&pp=iAQB' },
     { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 History', videoUrl: 'https://www.youtube.com/watch?v=P6iFT1XAnr0&list=PLA2sIXNgNKf7zFI67_PvOsej2JQDAjrCX&index=8&pp=iAQB' },
   ],
+  7: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1  Biology', videoUrl: 'https://www.youtube.com/watch?v=BZip_XL5v1o&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2  Biology', videoUrl: 'https://www.youtube.com/watch?v=WE1k9SmRgs4&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3  Biology', videoUrl: 'https://www.youtube.com/watch?v=WoATlVdrcdw&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4  Biology', videoUrl: 'https://www.youtube.com/watch?v=Jr6aqsE9S54&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5  Biology', videoUrl: 'https://www.youtube.com/watch?v=k0QOBv8xGSA&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6  Biology', videoUrl: 'https://www.youtube.com/watch?v=PksMSAwStkU&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=6&pp=iAQB' },
+    
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7  Biology', videoUrl: 'https://www.youtube.com/watch?v=OfekNwtXsBc&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8  Biology', videoUrl: 'https://www.youtube.com/watch?v=HuVSoyaAsto&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=8&pp=iAQB' },
+    { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9  Biology', videoUrl: 'https://www.youtube.com/watch?v=gsYRrtGc2I4&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=9&pp=iAQB' },
+    { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10  Biology', videoUrl: 'https://www.youtube.com/watch?v=AlranojEWWw&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=10&pp=iAQB' },
+    { id: 11, title: 'Lesson 11', description: 'Description for Lesson 11  Biology', videoUrl: 'https://www.youtube.com/watch?v=OnP_l1rKiHs&list=PLA2sIXNgNKf6fhWDdO9Op-_d-dYmXk4WQ&index=11&pp=iAQB' },
+  ],
   // Add similar structure for other courses if needed
 };
 
