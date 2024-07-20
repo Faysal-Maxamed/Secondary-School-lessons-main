@@ -74,6 +74,30 @@ const lessonsData = {
     { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 History', videoUrl: 'https://www.youtube.com/watch?v=cp5Q-VXZWZI&list=PLOofE1KOTUEIpQ7gNA_wvCFttrBzBmuXl&index=7&pp=iAQB' },
     { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 History', videoUrl: 'https://www.youtube.com/watch?v=HkqRY9y_UUs&list=PLOofE1KOTUEIpQ7gNA_wvCFttrBzBmuXl&index=8&pp=iAQB' },
   ],
+  7: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1  Biology', videoUrl: 'https://www.youtube.com/watch?v=c-kBPtkp5_Q&list=PLHtijejfff9dWSWpd1wRiCUZvA97vq14I&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2  Biology', videoUrl: 'https://www.youtube.com/watch?v=JofjeV6P8LE&list=PLHtijejfff9dWSWpd1wRiCUZvA97vq14I&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3  Biology', videoUrl: 'https://www.youtube.com/watch?v=BxegIpmIKc4&list=PLHtijejfff9dWSWpd1wRiCUZvA97vq14I&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4  Biology', videoUrl: 'https://www.youtube.com/watch?v=d1lF0jDOB_o&list=PLHtijejfff9dWSWpd1wRiCUZvA97vq14I&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5  Biology', videoUrl: 'https://www.youtube.com/watch?v=g9PjYl696Zc&list=PLHtijejfff9dWSWpd1wRiCUZvA97vq14I&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6  Biology', videoUrl: 'https://www.youtube.com/watch?v=DkMYNuY2nyg&list=PLHtijejfff9dWSWpd1wRiCUZvA97vq14I&index=6&pp=iAQB' },
+    
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7  Biology', videoUrl: 'https://www.youtube.com/watch?v=Hxd8MqqPip8&list=PLHtijejfff9dWSWpd1wRiCUZvA97vq14I&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8  Biology', videoUrl: 'https://www.youtube.com/watch?v=ugl35BfFdTE&list=PLHtijejfff9dWSWpd1wRiCUZvA97vq14I&index=8&pp=iAQB' },
+    { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9  Biology', videoUrl: 'https://www.youtube.com/watch?v=8QpFpOaMFdg&list=PLHtijejfff9dWSWpd1wRiCUZvA97vq14I&index=9&pp=iAQB' },
+    { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10  Biology', videoUrl: 'https://www.youtube.com/watch?v=0fYZH-9sQwY&list=PLHtijejfff9dWSWpd1wRiCUZvA97vq14I&index=10&pp=iAQB' },
+    { id: 11, title: 'Lesson 11', description: 'Description for Lesson 11  Biology', videoUrl: 'https://www.youtube.com/watch?v=l5y3j7Y-mZM&list=PLHtijejfff9dWSWpd1wRiCUZvA97vq14I&index=11&pp=iAQB' },
+  ],
+  8: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Technology', videoUrl: 'https://www.youtube.com/watch?v=E5e3JJJpEJ4&list=PLb6qPthBWy0cyfyyBI_0oqES15lE4RaCA&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Technology', videoUrl: 'https://www.youtube.com/watch?v=JOeBkGMjTVs&list=PLb6qPthBWy0cyfyyBI_0oqES15lE4RaCA&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Technology', videoUrl: 'https://www.youtube.com/watch?v=6tL72HE7czo&list=PLb6qPthBWy0cyfyyBI_0oqES15lE4RaCA&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Technology', videoUrl: 'https://www.youtube.com/watch?v=FnC1ARFzuRo&list=PLb6qPthBWy0cyfyyBI_0oqES15lE4RaCA&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Technology', videoUrl: 'https://www.youtube.com/watch?v=rEIn7X96SUM&list=PLb6qPthBWy0cyfyyBI_0oqES15lE4RaCA&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Technology', videoUrl: 'https://www.youtube.com/watch?v=OOpyO7xglX8&list=PLb6qPthBWy0cyfyyBI_0oqES15lE4RaCA&index=6&pp=iAQB' },
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 Technology', videoUrl: 'https://www.youtube.com/watch?v=9w8COQgztVI&list=PLb6qPthBWy0cyfyyBI_0oqES15lE4RaCA&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 Technology', videoUrl: 'https://www.youtube.com/watch?v=xT1j7-bLWsU&list=PLb6qPthBWy0cyfyyBI_0oqES15lE4RaCA&index=8&pp=iAQB' },
+  ],
   // Add similar structure for other courses if needed
 };
 

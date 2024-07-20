@@ -23,7 +23,7 @@ const form4Data = [
   { id: 5, name: 'Chemistry Course', description: 'Explore the principles of Chemistry through detailed lessons.', image: chemistryImage },
   { id: 6, name: 'History Course', description: 'Dive into the important events and figures in History.', image: historyImage },
   { id: 7, name: 'Biology Course', description: 'Understand the complexities of Biology with our comprehensive course.', image: biologyImage },
-  { id: 8, name: 'Geography Course', description: 'Understand Geography with lessons covering various topics.', image: geographyImage },
+  { id: 8, name: 'Technology Course', description: 'Understand Technology Course with lessons covering various topics.', image: geographyImage },
 ];
 
 const NextArrow = ({ className, onClick, currentSlide, slideCount }) => (
