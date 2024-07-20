@@ -20,7 +20,7 @@ const form3Data = [
   { id: 2, name: 'Chemistry Course', description: 'In this course you will learn all Chemistry lessons of all classes of the secondary school', image: englishImage },
   { id: 3, name: 'Math Course', description: 'Master Mathematics with lessons covering various topics.', image: mathImage },
   { id: 4, name: 'Physics Course', description: 'Learn the fundamentals of Physics for secondary school.', image: physicsImage },
-  { id: 5, name: ' Course', description: 'Explore the principles of Chemistry through detailed lessons.', image: chemistryImage },
+  { id: 5, name: 'Bussness Course', description: 'Explore the principles of Bussnes through detailed lessons.', image: chemistryImage },
   { id: 6, name: 'History Course', description: 'Dive into the important events and figures in History.', image: historyImage },
   { id: 7, name: 'Biology Course', description: 'Understand the complexities of Biology with our comprehensive course.', image: biologyImage },
   { id: 8, name: 'Geography Course', description: 'Understand Geography with lessons covering various topics.', image: geographyImage },

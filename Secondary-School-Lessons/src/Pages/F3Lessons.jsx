@@ -38,6 +38,41 @@ const lessonsData = {
     { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=-TkrlW-ftgc&list=PLOofE1KOTUELVkBDIgrgXRGZCxGSKMglJ&index=9&pp=iAQB' },
     { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=lQmLLxtbDIg&list=PLOofE1KOTUELVkBDIgrgXRGZCxGSKMglJ&index=10&pp=iAQB' },
   ],
+  4: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Physics', videoUrl: 'https://www.youtube.com/watch?v=4GXjVOq66d4&list=PLG4SdbUov5hQ_Ob5HgS2DmQVaHY8Bh0q5&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Physics', videoUrl: 'https://www.youtube.com/watch?v=7v7O9HGHMJY&list=PLG4SdbUov5hQ_Ob5HgS2DmQVaHY8Bh0q5&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Physics', videoUrl: 'https://www.youtube.com/watch?v=JDlUy1iG4mc&list=PLG4SdbUov5hQ_Ob5HgS2DmQVaHY8Bh0q5&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Physics', videoUrl: 'https://www.youtube.com/watch?v=nyDaJhuB9oc&list=PLG4SdbUov5hQ_Ob5HgS2DmQVaHY8Bh0q5&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Physics', videoUrl: 'https://www.youtube.com/watch?v=zucfhIj3y7U&list=PLG4SdbUov5hQ_Ob5HgS2DmQVaHY8Bh0q5&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Physics', videoUrl: 'https://www.youtube.com/watch?v=zmoO66QAQxs&list=PLG4SdbUov5hThSGAA52GVuL4XndFlHywd&index=6&pp=iAQB' },
+    
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 Physics', videoUrl: 'https://www.youtube.com/watch?v=ntP4ghYSX0c&list=PLG4SdbUov5hQUCMvyyLGN0CSJdH1cRfd9&index=1&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 Physics', videoUrl: 'https://www.youtube.com/watch?v=sefqqxw3Du8&list=PLG4SdbUov5hQUCMvyyLGN0CSJdH1cRfd9&index=2&pp=iAQB' },
+    { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9 Physics', videoUrl: 'https://www.youtube.com/watch?v=Rcwr9GO9_Dw&list=PLG4SdbUov5hQUCMvyyLGN0CSJdH1cRfd9&index=3&pp=iAQB' },
+    { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10 Physics', videoUrl: 'https://www.youtube.com/watch?v=0-VJ99p9BFo&list=PLG4SdbUov5hR6Zw_1hi7j24-4XbZBUl8q&index=1&pp=iAQB' },
+    { id: 11, title: 'Lesson 11', description: 'Description for Lesson 11 Physics', videoUrl: 'https://www.youtube.com/watch?v=-dNeS1FWvHo&list=PLG4SdbUov5hR6Zw_1hi7j24-4XbZBUl8q&index=2&pp=iAQB' },
+
+  ],
+  5: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Bussness', videoUrl: 'https://www.youtube.com/watch?v=HzDQzFiqYBI&list=PLA2sIXNgNKf5KloaVYw72eLLBhmUUT6oN&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Bussness', videoUrl: 'https://www.youtube.com/watch?v=P7K4bgwGleA&list=PLA2sIXNgNKf5KloaVYw72eLLBhmUUT6oN&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Bussness', videoUrl: 'https://www.youtube.com/watch?v=S6m-xoSGybs&list=PLA2sIXNgNKf5KloaVYw72eLLBhmUUT6oN&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Bussness', videoUrl: 'https://www.youtube.com/watch?v=b3sfq-FCEWk&list=PLA2sIXNgNKf7zFI67_PvOsej2JQDAjrCX&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Bussness', videoUrl: 'https://www.youtube.com/watch?v=mM6LMo641e4&list=PLA2sIXNgNKf5KloaVYw72eLLBhmUUT6oN&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Bussness', videoUrl: 'https://www.youtube.com/watch?v=9S6afgQkfo8&list=PLA2sIXNgNKf5KloaVYw72eLLBhmUUT6oN&index=6&pp=iAQB' },
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 Bussness', videoUrl: 'https://www.youtube.com/watch?v=Q5hCzvV4uRg&list=PLA2sIXNgNKf5KloaVYw72eLLBhmUUT6oN&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 Bussness', videoUrl: 'https://www.youtube.com/watch?v=NNglnPPdcNs&list=PLA2sIXNgNKf5KloaVYw72eLLBhmUUT6oN&index=8&pp=iAQB' },
+  ],
+  6: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 History', videoUrl: 'https://www.youtube.com/watch?v=N3HohpZa8C8&list=PLOofE1KOTUEL25ld2lKIBXeTD4foJvQTt&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 History', videoUrl: 'https://www.youtube.com/watch?v=STbKd_zxAKQ&list=PLOofE1KOTUEL25ld2lKIBXeTD4foJvQTt&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 History', videoUrl: 'https://www.youtube.com/watch?v=GcUf6osRZeE&list=PLOofE1KOTUEL25ld2lKIBXeTD4foJvQTt&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 History', videoUrl: 'https://www.youtube.com/watch?v=avfzD3rYN6Q&list=PLOofE1KOTUEL25ld2lKIBXeTD4foJvQTt&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 History', videoUrl: 'https://www.youtube.com/watch?v=iWAl-GmGFQM&list=PLOofE1KOTUEL25ld2lKIBXeTD4foJvQTt&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 History', videoUrl: 'https://www.youtube.com/watch?v=JhHT6RxDxaI&list=PLOofE1KOTUEL25ld2lKIBXeTD4foJvQTt&index=6&pp=iAQB' },
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 History', videoUrl: 'https://www.youtube.com/watch?v=dD5WnUrGv5U&list=PLOofE1KOTUEL25ld2lKIBXeTD4foJvQTt&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 History', videoUrl: 'https://www.youtube.com/watch?v=RCzNH9Ew1jw&list=PLOofE1KOTUEL25ld2lKIBXeTD4foJvQTt&index=8&pp=iAQB' },
+  ],
   // Add similar structure for other courses if needed
 };
 
