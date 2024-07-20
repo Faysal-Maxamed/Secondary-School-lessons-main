@@ -4,17 +4,39 @@ import { FaPlayCircle, FaBars } from 'react-icons/fa';
 
 const lessonsData = {
   1: [
-    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Arabic', videoUrl: 'https://www.youtube.com/watch?v=O7OXqETTZRU&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=1&pp=iAQB' },
-    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Arabic', videoUrl: 'https://www.youtube.com/watch?v=jdxA0EeAH3o&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=2&pp=iAQB' },
-    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Arabic', videoUrl: 'https://www.youtube.com/watch?v=9bXLAbZIhzQ&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=3&pp=iAQB' },
-    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Arabic', videoUrl: 'https://www.youtube.com/watch?v=F54keQjGsgs&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=4&pp=iAQB' },
-    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Arabic', videoUrl: 'https://www.youtube.com/watch?v=S0MZ6G5ODeY&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=5&pp=iAQB' },
-    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Arabic', videoUrl: 'https://www.youtube.com/watch?v=Gq9_KMST4CQ&list=PLA2sIXNgNKf6z_M5g_s0e2Yte13ic7ten&index=6&pp=iAQB' },
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Technology', videoUrl: 'https://www.youtube.com/watch?v=u6iP_PmcJRg&list=PLb6qPthBWy0cR3ZwG_JHpkd62DHKdn0V-&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Technology', videoUrl: 'https://www.youtube.com/watch?v=mknowLewArk&list=PLb6qPthBWy0cR3ZwG_JHpkd62DHKdn0V-&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Technology', videoUrl: 'https://www.youtube.com/watch?v=Mujac7QX1Yk&list=PLb6qPthBWy0cR3ZwG_JHpkd62DHKdn0V-&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Technology', videoUrl: 'https://www.youtube.com/watch?v=Yrj2lQTulQo&list=PLb6qPthBWy0cR3ZwG_JHpkd62DHKdn0V-&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Technology', videoUrl: 'https://www.youtube.com/watch?v=XmYooyJ2PDU&list=PLb6qPthBWy0cR3ZwG_JHpkd62DHKdn0V-&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Technology', videoUrl: 'https://www.youtube.com/watch?v=DzSKyLZ_WCI&list=PLb6qPthBWy0cR3ZwG_JHpkd62DHKdn0V-&index=6&pp=iAQB' },
   ],
   2: [
-    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 English', videoUrl: '' },
-    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 English', videoUrl: 'https://www.youtube.com/watch?list=PLA2sIXNgNKf5o-qzU7yrC7USJhq__1iDj&v=jndoZU9fpPc&feature=youtu.be' },
-    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 English', videoUrl: 'https://www.youtube.com/watch?list=PLA2sIXNgNKf5o-qzU7yrC7USJhq__1iDj&v=jndoZU9fpPc&feature=youtu.be' },
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Chemistry', videoUrl: 'https://www.youtube.com/watch?v=FpabU-S1R-I&list=PLqoLUta03xCKr-xslraKjG6n-Y-VfQWeF&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=nLa_LX_Pdlo&list=PLqoLUta03xCKr-xslraKjG6n-Y-VfQWeF&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=ibzDgV4DE5w&list=PLqoLUta03xCKr-xslraKjG6n-Y-VfQWeF&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=l4DAj4VGe3E&list=PLqoLUta03xCKr-xslraKjG6n-Y-VfQWeF&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=O1f2pWSx5ZI&list=PLqoLUta03xCKr-xslraKjG6n-Y-VfQWeF&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=s3WRbQ0IhGg&list=PLqoLUta03xCKr-xslraKjG6n-Y-VfQWeF&index=6&pp=iAQB' },
+    
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=W1lEC11RP_Y&list=PLqoLUta03xCKr-xslraKjG6n-Y-VfQWeF&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=MzzqZivUVgA&list=PLqoLUta03xCKr-xslraKjG6n-Y-VfQWeF&index=8&pp=iAQB' },
+    { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=C1kg5MoeG5Y&list=PLqoLUta03xCKr-xslraKjG6n-Y-VfQWeF&index=9&pp=iAQB' },
+    { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=kPHjaQsRtSs&list=PLqoLUta03xCKr-xslraKjG6n-Y-VfQWeF&index=10&pp=iAQB' },
+    { id: 11, title: 'Lesson 11', description: 'Description for Lesson 11  Chemistry', videoUrl: 'https://www.youtube.com/watch?v=gmK3qD523jM&list=PLqoLUta03xCKr-xslraKjG6n-Y-VfQWeF&index=11&pp=iAQB' },
+  ],
+  3: [
+    { id: 1, title: 'Lesson 1', description: 'Description for Lesson 1 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=4bXGhaI4XO8&list=PLOofE1KOTUELVkBDIgrgXRGZCxGSKMglJ&index=1&pp=iAQB' },
+    { id: 2, title: 'Lesson 2', description: 'Description for Lesson 2 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=3FyCUZpHxS4&list=PLOofE1KOTUELVkBDIgrgXRGZCxGSKMglJ&index=2&pp=iAQB' },
+    { id: 3, title: 'Lesson 3', description: 'Description for Lesson 3 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=mBeamXqwr58&list=PLOofE1KOTUELVkBDIgrgXRGZCxGSKMglJ&index=3&pp=iAQB' },
+    { id: 4, title: 'Lesson 4', description: 'Description for Lesson 4 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=kq_xOCnOZ1Q&list=PLOofE1KOTUELVkBDIgrgXRGZCxGSKMglJ&index=4&pp=iAQB' },
+    { id: 5, title: 'Lesson 5', description: 'Description for Lesson 5 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=kWFcOgB5JjM&list=PLOofE1KOTUELVkBDIgrgXRGZCxGSKMglJ&index=5&pp=iAQB' },
+    { id: 6, title: 'Lesson 6', description: 'Description for Lesson 6 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=8AkwKbX_Nag&list=PLOofE1KOTUELVkBDIgrgXRGZCxGSKMglJ&index=6&pp=iAQB' },
+    
+    { id: 7, title: 'Lesson 7', description: 'Description for Lesson 7 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=960TKxhYpSQ&list=PLOofE1KOTUELVkBDIgrgXRGZCxGSKMglJ&index=7&pp=iAQB' },
+    { id: 8, title: 'Lesson 8', description: 'Description for Lesson 8 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=uxjklmyBmt0&list=PLOofE1KOTUELVkBDIgrgXRGZCxGSKMglJ&index=8&pp=iAQB' },
+    { id: 9, title: 'Lesson 9', description: 'Description for Lesson 9 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=-TkrlW-ftgc&list=PLOofE1KOTUELVkBDIgrgXRGZCxGSKMglJ&index=9&pp=iAQB' },
+    { id: 10, title: 'Lesson 10', description: 'Description for Lesson 10 Mathmatics', videoUrl: 'https://www.youtube.com/watch?v=lQmLLxtbDIg&list=PLOofE1KOTUELVkBDIgrgXRGZCxGSKMglJ&index=10&pp=iAQB' },
   ],
   // Add similar structure for other courses if needed
 };
@@ -57,7 +79,7 @@ const F3Lessons = () => {
       <div className="flex flex-col md:flex-row">
         {/* Sidebar for Desktop */}
         <div className={`md:w-1/4 bg-gray-200 p-4 rounded-lg ${mobileSidebarVisible ? 'block md:hidden' : 'hidden md:block'}`}>
-          <h4 className="text-xl font-semibold mb-4">Other Lessons in this Course:</h4>
+          <h4 className="text-xl font-semibold mb-12">Other Lessons in this Course:</h4>
           <div className="space-y-2">
             {lessons.map((lesson) => (
               <button
