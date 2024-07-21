@@ -14,16 +14,18 @@ const Register = ({ onRegister }) => {
     district: ''
   });
 
+  const [users, setUsers] = useState([]);
+
   useEffect(() => {
-    const savedFormData = localStorage.getItem('formData');
-    if (savedFormData) {
-      setFormData(JSON.parse(savedFormData));
+    const savedUsers = localStorage.getItem('users');
+    if (savedUsers) {
+      setUsers(JSON.parse(savedUsers));
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('formData', JSON.stringify(formData));
-  }, [formData]);
+    localStorage.setItem('users', JSON.stringify(users));
+  }, [users]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,7 +34,19 @@ const Register = ({ onRegister }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onRegister(formData);
+    const newUser = { ...formData };
+    setUsers([...users, newUser]);
+    setFormData({
+      fullName: '',
+      age: '',
+      address: '',
+      phone: '',
+      email: '',
+      password: '',
+      school: '',
+      class: '',
+      district: ''
+    });
   };
 
   return (

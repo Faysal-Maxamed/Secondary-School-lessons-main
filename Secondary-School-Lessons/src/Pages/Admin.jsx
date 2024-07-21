@@ -1,46 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Admin = ({ users, setUsers }) => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    age: '',
-    address: '',
-    phone: '',
-    email: ''
-  });
+const Admin = () => {
+  const [users, setUsers] = useState([]);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleAddUser = () => {
-    // Check if any field is blank
-    for (let key in formData) {
-      if (formData[key] === '' || formData[key] === null) {
-        alert('All fields must be filled out');
-        return;
-      }
+  useEffect(() => {
+    const savedUsers = localStorage.getItem('users');
+    if (savedUsers) {
+      setUsers(JSON.parse(savedUsers));
     }
-
-    setUsers([...users, formData]);
-    setFormData({
-      fullName: '',
-      age: '',
-      address: '',
-      phone: '',
-      email: ''
-    });
-  };
+  }, []);
 
   const handleDeleteUser = (index) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       const newUsers = users.filter((_, i) => i !== index);
       setUsers(newUsers);
+      localStorage.setItem('users', JSON.stringify(newUsers));
     }
   };
 
-  
   return (
     <div className="container mx-auto p-4 my-8">
       <h2 className="text-3xl font-bold mb-4">Admin Page</h2>
@@ -66,7 +43,6 @@ const Admin = ({ users, setUsers }) => {
                   <td className="py-2 px-4 border">{user.phone}</td>
                   <td className="py-2 px-4 border">{user.email}</td>
                   <td className="py-2 px-4 border">
-                   
                     <button
                       className="bg-red-500 text-white px-2 py-1 rounded ml-16"
                       onClick={() => handleDeleteUser(index)}
@@ -80,7 +56,6 @@ const Admin = ({ users, setUsers }) => {
           </table>
         </div>
       </div>
-      
     </div>
   );
 };
