@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHome, faBook, faUsers, faUserPlus, faSignOutAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 import Profile from '../Components/Profile';
 import RegisterAdmin from '../Components/RegisterAdmin';
-import UsersList from '../Components/UsersList';
+import Admin from '../Pages/Admin'; // Import the Admin component
 
 const Dashboard = ({ user, setUser, onLogout }) => {
   const navigate = useNavigate();
@@ -134,7 +134,7 @@ const Dashboard = ({ user, setUser, onLogout }) => {
           <p className="text-lg mb-8">Welcome to the Dashboard! Enjoy Your Time</p>
         )}
         {showProfile && <Profile user={user} setUser={setUser} />}
-        {showUsers && <UsersList users={users} />} {/* Pass the users state */}
+        {showUsers && <Admin users={users} setUsers={setUsers} />} {/* Display Admin component */}
         {showRegisterAdmin && <RegisterAdmin onRegister={handleRegister} />} {/* Pass the handleRegister function */}
       </div>
     </div>
