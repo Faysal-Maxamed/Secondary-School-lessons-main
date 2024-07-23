@@ -19,7 +19,7 @@ const AboutUs = () => {
           <img src={teamMember1} alt="About Us" className="rounded-lg border-2 border-gray-300" />
         </div>
         <div className="md:w-1/2 md:pl-8">
-          <h2 className="text-3xl font-bold mb-4">About Us</h2>
+          <h2 className="text-3xl font-bold mb-4 text-green-500">About Us</h2>
           <p className="mb-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra tellus nec eleifend tempor. 
             Vestibulum id magna vel urna posuere semper a vel augue. Nulla facilisi. Vestibulum dapibus sapien 

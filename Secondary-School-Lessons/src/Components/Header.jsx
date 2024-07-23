@@ -3,9 +3,13 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Header = ({ user, onLogout }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [coursesOpen, setCoursesOpen] = useState(false);
+  const [adminMenuOpen, setAdminMenuOpen] = useState(false); // New state for admin menu
   const navigate = useNavigate();
   const location = useLocation();
   const menuRef = useRef(null);
+  const coursesRef = useRef(null);
+  const adminMenuRef = useRef(null); // Ref for admin menu
 
   const handleLogout = () => {
     if (window.confirm('Are you sure you want to log out?')) {
@@ -18,9 +22,23 @@ const Header = ({ user, onLogout }) => {
     setMenuOpen(!menuOpen);
   };
 
+  const toggleCourses = () => {
+    setCoursesOpen(!coursesOpen);
+  };
+
+  const toggleAdminMenu = () => { // New function to toggle admin menu
+    setAdminMenuOpen(!adminMenuOpen);
+  };
+
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setMenuOpen(false);
+    }
+    if (coursesRef.current && !coursesRef.current.contains(event.target)) {
+      setCoursesOpen(false);
+    }
+    if (adminMenuRef.current && !adminMenuRef.current.contains(event.target)) { // Handle admin menu click outside
+      setAdminMenuOpen(false);
     }
   };
 
@@ -35,6 +53,26 @@ const Header = ({ user, onLogout }) => {
     return location.pathname === path ? 'text-yellow-500' : '';
   };
 
+  const navigateToForm2 = () => {
+    navigate('/form2');
+  };
+
+  const navigateToForm3 = () => {
+    navigate('/form3');
+  };
+
+  const navigateToForm4 = () => {
+    navigate('/form4');
+  };
+
+  const navigateToRegisterAdmin = () => {
+    navigate('/registeradmin');
+  };
+
+  const navigateToAdmin = () => {
+    navigate('/admin');
+  };
+
   return (
     <header className="bg-white text-gray-800 p-4 flex justify-between items-center shadow-md relative z-20">
       <Link to="/home" className="text-2xl font-bold flex items-center">
@@ -42,7 +80,6 @@ const Header = ({ user, onLogout }) => {
           Smart
           <span className="text-green-500 ml-4">College</span>
         </h1>
-
       </Link>
       <nav className="space-x-4 flex items-center">
         <div className="hidden md:flex space-x-8">
@@ -52,11 +89,43 @@ const Header = ({ user, onLogout }) => {
           <Link to="/about-us" className={`hover:text-green-500 ${getLinkClass('/about-us')}`}>
             About
           </Link>
-          <Link to="/Dashboard" className={`hover:text-green-500 ${getLinkClass('/services')}`}>
-            Dashboard
-          </Link>
-
-
+         
+          <div className="relative" ref={coursesRef}>
+            <button onClick={toggleCourses} className="hover:text-green-500">
+              Courses
+            </button>
+            {coursesOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
+                <button onClick={() => navigate('/form1')} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                  Form 1 Course
+                </button>
+                <button onClick={navigateToForm2} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                  Form 2 Course
+                </button>
+                <button onClick={navigateToForm3} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                  Form 3 Course
+                </button>
+                <button onClick={navigateToForm4} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                  Form 4 Course
+                </button>
+              </div>
+            )}
+          </div>
+          <div className="relative" ref={adminMenuRef}> {/* New admin menu section */}
+            <button onClick={toggleAdminMenu} className="hover:text-green-500">
+              Admin
+            </button>
+            {adminMenuOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
+                <button onClick={navigateToRegisterAdmin} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                  Register Admin
+                </button>
+                <button onClick={navigateToAdmin} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                  Admin Page
+                </button>
+              </div>
+            )}
+          </div>
           <Link to="/contact-us" className={`hover:text-green-500 ${getLinkClass('/contact-us')}`}>
             Contact
           </Link>
@@ -97,14 +166,46 @@ const Header = ({ user, onLogout }) => {
                 About
               </Link>
 
-
-              <Link to="/contact-us" className={`block px-4 py-2 ${getLinkClass('/contact-us')}`}>
-                Contact
-              </Link>
               {user && (
                 <>
-                  <Link to="/dashboard" className={`block px-4 py-2 ${getLinkClass('/dashboard')}`}>
-                    Dashboard
+                  <div className="relative" ref={coursesRef}>
+                    <button onClick={toggleCourses} className="block px-4 py-2 w-full text-left hover:bg-gray-100">
+                      Courses
+                    </button>
+                    {coursesOpen && (
+                      <div className="absolute right-0 top-10 w-full bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
+                        <button onClick={() => navigate('/form1')} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                          Form 1 Course
+                        </button>
+                        <button onClick={navigateToForm2} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                          Form 2 Course
+                        </button>
+                        <button onClick={navigateToForm3} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                          Form 3 Course
+                        </button>
+                        <button onClick={navigateToForm4} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                          Form 4 Course
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                  <div className="relative" ref={adminMenuRef}>
+                    <button onClick={toggleAdminMenu} className="block px-4 py-2 w-full text-left hover:bg-gray-100">
+                      Admin
+                    </button>
+                    {adminMenuOpen && (
+                      <div className="absolute right-0 top-10 w-full bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
+                        <button onClick={navigateToRegisterAdmin} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                          Register Admin
+                        </button>
+                        <button onClick={navigateToAdmin} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                          Admin Page
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                  <Link to="/contact-us" className={`block px-4 py-2 ${getLinkClass('/contact-us')}`}>
+                    Contact
                   </Link>
                   <button
                     onClick={handleLogout}
@@ -123,5 +224,3 @@ const Header = ({ user, onLogout }) => {
 };
 
 export default Header;
-
-
