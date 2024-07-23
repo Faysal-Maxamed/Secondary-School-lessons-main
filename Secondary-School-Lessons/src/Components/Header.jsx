@@ -36,18 +36,42 @@ const Header = ({ user, onLogout }) => {
   };
 
   return (
-    <header className="bg-gray-600 text-white p-4 flex justify-between items-center  relative z-20">
-      <Link to="/home" className="text-2xl font-bold">
+    <header className="bg-white text-gray-800 p-4 flex justify-between items-center shadow-md relative z-20">
+      <Link to="/home" className="text-2xl font-bold flex items-center">
+     
         EduPlatform
       </Link>
       <nav className="space-x-4 flex items-center">
+        <div className="hidden md:flex space-x-8">
+          <Link to="/home" className={`hover:text-green-500 ${getLinkClass('/home')}`}>
+            Home
+          </Link>
+          <Link to="/about-us" className={`hover:text-green-500 ${getLinkClass('/about-us')}`}>
+            About
+          </Link>
+          <Link to="/Dashboard" className={`hover:text-green-500 ${getLinkClass('/services')}`}>
+          Dashboard
+          </Link>
+        
+          
+          <Link to="/contact-us" className={`hover:text-green-500 ${getLinkClass('/contact-us')}`}>
+            Contact
+          </Link>
+          <button
+            onClick={handleLogout}
+            className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-md hidden md:block"
+          >
+            Logout
+          </button>
+        </div>
+       
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="block text-gray-200 hover:text-white focus:text-white focus:outline-none"
+            className="block text-gray-800 hover:text-gray-900 focus:outline-none"
           >
             <svg
-              className="h-6 w-6 fill-current"
+              className="h-6 w-6"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -63,43 +87,25 @@ const Header = ({ user, onLogout }) => {
           </button>
           {menuOpen && (
             <div className="absolute right-0 top-16 mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30" ref={menuRef}>
-              <Link
-                to="/home"
-                className={`block px-4 py-2 text-gray-800 ${getLinkClass('/')}`}
-              >
+              <Link to="/home" className={`block px-4 py-2 ${getLinkClass('/home')}`}>
                 Home
               </Link>
-              <Link
-                to="/about-us"
-                className={`block px-4 py-2 text-gray-800 ${getLinkClass('/about-us')}`}
-              >
-                About Us
+              <Link to="/about-us" className={`block px-4 py-2 ${getLinkClass('/about-us')}`}>
+                About
               </Link>
-            
-              <Link
-                to="/contact-us"
-                className={`block px-4 py-2 text-gray-800 ${getLinkClass('/contact-us')}`}
-              >
-                Contact Us
+              
+             
+              <Link to="/contact-us" className={`block px-4 py-2 ${getLinkClass('/contact-us')}`}>
+                Contact
               </Link>
               {user && (
                 <>
-                  <Link
-                    to="/dashboard"
-                    className={`block px-4 py-2 text-gray-800 ${getLinkClass('/dashboard')}`}
-                  >
+                  <Link to="/dashboard" className={`block px-4 py-2 ${getLinkClass('/dashboard')}`}>
                     Dashboard
                   </Link>
-                  <hr className="my-2" />
-                
-                  {user.isAdmin && (
-                    <>
-                      
-                    </>
-                  )}
                   <button
                     onClick={handleLogout}
-                    className="block w-full text-left text-gray-800 bg-red-500 hover:bg-red-600 px-4 py-2 rounded transition duration-300"
+                    className="bg-gradient-to-r from-green-400 to-blue-500 text-white w-full px-4 py-2 rounded-md"
                   >
                     Logout
                   </button>
@@ -108,37 +114,11 @@ const Header = ({ user, onLogout }) => {
             </div>
           )}
         </div>
-        <div className="md:flex md:items-center md:space-x-4 hidden">
-          <Link to="/home" className={`text-gray-200 hover:text-white ${getLinkClass('/')}`}>
-            Home
-          </Link>
-          <Link
-            to="/about-us"
-            className={`text-gray-200 hover:text-white ${getLinkClass('/about-us')}`}
-          >
-            About Us
-          </Link>
-         
-          
-          {user && (
-            <>
-              <Link to="/dashboard" className={`text-gray-200 hover:text-white ${getLinkClass('/dashboard')}`}>
-                Dashboard
-              </Link>
-              
-             <Link
-            to="/contact-us"
-            className={`text-gray-200 hover:text-white ${getLinkClass('/contact-us')}`}
-          >
-            Contact Us
-          </Link>
-              
-            </>
-          )}
-        </div>
       </nav>
     </header>
   );
 };
 
 export default Header;
+
+
