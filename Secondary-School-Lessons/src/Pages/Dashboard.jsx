@@ -74,12 +74,12 @@ const Dashboard = ({ user, setUser, onLogout }) => {
 
   return (
     <div className="flex min-h-screen">
-      <div className={`bg-gray-600 text-white p-4 ${isSidebarExpanded ? 'w-64' : 'w-20'} transition-all duration-300 flex flex-col items-center`}>
-        <button onClick={toggleSidebar} className="text-white mb-4 self-end">
+      <div className={`bg-gray-200 text-blue-800 p-4 ${isSidebarExpanded ? 'w-64' : 'w-20'} transition-all duration-300 flex flex-col items-center`}>
+        <button onClick={toggleSidebar} className="text-black mb-4 self-end">
           <FontAwesomeIcon icon={faBars} className="text-xl" />
         </button>
         <div className="text-center mb-8">
-          <FontAwesomeIcon icon={faUser} className="text-white text-4xl mb-4" />
+          <FontAwesomeIcon icon={faUser} className="text-blue text-4xl mb-4" />
           {isSidebarExpanded && user && (
             <>
               <h3>{user.name}</h3>
@@ -124,7 +124,7 @@ const Dashboard = ({ user, setUser, onLogout }) => {
               </button>
             </>
           )}
-          <button onClick={handleLogout} className="block w-full text-left p-2 text-lg font-medium text-red-500 transition duration-300 mt-auto">
+          <button onClick={handleLogout} className="block w-full ml-4 mt-20 text-left p-2 text-lg font-medium text-red-500 transition duration-300 mt-auto">
             <FontAwesomeIcon icon={faSignOutAlt} className="mr-2" /> {isSidebarExpanded && 'Logout'}
           </button>
         </nav>

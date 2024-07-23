@@ -38,8 +38,11 @@ const Header = ({ user, onLogout }) => {
   return (
     <header className="bg-white text-gray-800 p-4 flex justify-between items-center shadow-md relative z-20">
       <Link to="/home" className="text-2xl font-bold flex items-center">
-     
-        EduPlatform
+        <h1 className="text-blue-500 ml-4">
+          Smart
+          <span className="text-green-500 ml-4">College</span>
+        </h1>
+
       </Link>
       <nav className="space-x-4 flex items-center">
         <div className="hidden md:flex space-x-8">
@@ -50,10 +53,10 @@ const Header = ({ user, onLogout }) => {
             About
           </Link>
           <Link to="/Dashboard" className={`hover:text-green-500 ${getLinkClass('/services')}`}>
-          Dashboard
+            Dashboard
           </Link>
-        
-          
+
+
           <Link to="/contact-us" className={`hover:text-green-500 ${getLinkClass('/contact-us')}`}>
             Contact
           </Link>
@@ -64,7 +67,7 @@ const Header = ({ user, onLogout }) => {
             Logout
           </button>
         </div>
-       
+
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
@@ -93,8 +96,8 @@ const Header = ({ user, onLogout }) => {
               <Link to="/about-us" className={`block px-4 py-2 ${getLinkClass('/about-us')}`}>
                 About
               </Link>
-              
-             
+
+
               <Link to="/contact-us" className={`block px-4 py-2 ${getLinkClass('/contact-us')}`}>
                 Contact
               </Link>
