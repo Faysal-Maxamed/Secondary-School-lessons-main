@@ -104,7 +104,7 @@ const AboutUs = () => {
       </div>
 
       {/* start footer */}
-      <footer className="bg-blue-500 text-white py-12 mt-8 rounded-tl-lg rounded-br-lg mb-0">
+      <footer className="bg-gray-100 text-black py-12 mt-8 rounded-tl-lg rounded-br-lg mb-0">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-between">
           <div className="w-1/5 mb-4">
             <h2 className="text-xl font-bold mb-2">Shop Matcha</h2>
@@ -141,15 +141,16 @@ const AboutUs = () => {
               <input className="p-2 rounded border border-gray-300" type="email" placeholder="Your Email" required />
               <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" type="submit">Submit</button>
             </form>
-            {/* <div className="mt-4">
+            <div className="mt-4">
               <h2 className="text-xl font-bold mb-2">Follow us</h2>
               <div className="flex space-x-4">
-                <a href="https://www.pinterest.com" className="text-white hover:text-green-500"><FaWhatsapp size={24} /></a>
-                <a href="https://www.facebook.com" className="text-white hover:text-green-500"><FaFacebook size={24} /></a>
-                <a href="https://www.instagram.com" className="text-white hover:text-green-500"><FaInstagram size={24} /></a>
-                <a href="https://www.twitter.com" className="text-white hover:text-green-500"><FaTwitter size={24} /></a>
+                <a href="https://www.pinterest.com" className="text-green-600 hover:text-green-500"><FaWhatsapp size={24} /></a>
+                <a href="https://www.facebook.com" className="text-blue-600  hover:text-green-500"><FaFacebook size={24} /></a>
+                <a href="https://www.instagram.com" className="text-red-400  hover:text-green-500"><FaInstagram size={24} /></a>
+                <a href="https://www.twitter.com" className="text-blue-400
+                  hover:text-green-500"><FaTwitter size={24} /></a>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 mt-8 text-center text-sm">

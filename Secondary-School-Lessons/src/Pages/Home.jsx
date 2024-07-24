@@ -164,7 +164,7 @@ const HomePage = () => {
         </div>
       </section>
       {/* start footer */}
-      <footer className="bg-blue-500 text-white py-12 mt-8 rounded-tl-lg rounded-br-lg mb-0 container mx-auto">
+      <footer className="bg-gray-100 text-black py-12 mt-8 rounded-tl-lg rounded-br-lg mb-0 container mx-auto">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-between">
           <div className="w-1/5 mb-4">
             <h2 className="text-xl font-bold mb-2">Shop Matcha</h2>
@@ -204,10 +204,10 @@ const HomePage = () => {
             <div className="mt-4">
               <h2 className="text-xl font-bold mb-2">Follow us</h2>
               <div className="mt-8 flex justify-center space-x-4">
-                <a href="#" className="text-blue-800 hover:text-gray-900 text-2xl"><FaFacebookF /></a>
+                <a href="#" className="text-blue-600 hover:text-gray-900 text-2xl"><FaFacebookF /></a>
                 <a href="#" className="text-red-400 hover:text-gray-900 text-2xl"><FaInstagram /></a>
-                <a href="#" className="text-red-700 hover:text-gray-900 text-2xl"><FaYoutube /></a>
-                <a href="#" className="text-black-500 hover:text-gray-900 text-2xl"><FaTwitter /></a>
+                <a href="#" className="text-red-600 hover:text-gray-900 text-2xl"><FaYoutube /></a>
+                <a href="#" className="text-blue-400 hover:text-gray-900 text-2xl"><FaTwitter /></a>
               </div>
             </div>
           </div>

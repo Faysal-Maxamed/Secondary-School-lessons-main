@@ -89,14 +89,14 @@ const Header = ({ user, onLogout }) => {
           <Link to="/about-us" className={`hover:text-green-500 ${getLinkClass('/about-us')}`}>
             About
           </Link>
-         
+
           <div className="relative" ref={coursesRef}>
             <button onClick={toggleCourses} className="hover:text-green-500">
               Courses
             </button>
             {coursesOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
-                <button onClick={() => navigate('/form1')} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                <button onClick={() => navigate('/courses')} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
                   Form 1 Course
                 </button>
                 <button onClick={navigateToForm2} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
@@ -111,21 +111,7 @@ const Header = ({ user, onLogout }) => {
               </div>
             )}
           </div>
-          <div className="relative" ref={adminMenuRef}> {/* New admin menu section */}
-            <button onClick={toggleAdminMenu} className="hover:text-green-500">
-              Admin
-            </button>
-            {adminMenuOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
-                <button onClick={navigateToRegisterAdmin} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-                  Register Admin
-                </button>
-                <button onClick={navigateToAdmin} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-                  Admin Page
-                </button>
-              </div>
-            )}
-          </div>
+        
           <Link to="/contact-us" className={`hover:text-green-500 ${getLinkClass('/contact-us')}`}>
             Contact
           </Link>
@@ -138,90 +124,90 @@ const Header = ({ user, onLogout }) => {
         </div>
 
         <div className="md:hidden">
-  <button
-    onClick={toggleMenu}
-    className="block text-gray-800 hover:text-gray-900 focus:outline-none"
-  >
-    <svg
-      className="h-6 w-6 text-gray-800" // Ensure the color is visible
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        className={menuOpen ? 'hidden' : 'block'}
-        d="M4 6h16M4 12h16M4 18h16"
-        stroke="currentColor" // Use currentColor for consistent color
-        strokeWidth="2"
-      />
-      <path
-        className={menuOpen ? 'block' : 'hidden'}
-        d="M6 18L18 6M6 6l12 12"
-        stroke="currentColor" // Use currentColor for consistent color
-        strokeWidth="2"
-      />
-    </svg>
-  </button>
-  {menuOpen && (
-    <div className="absolute right-0 top-16 mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30" ref={menuRef}>
-      <Link to="/home" className={`block px-4 py-2 ${getLinkClass('/home')}`}>
-        Home
-      </Link>
-      <Link to="/about-us" className={`block px-4 py-2 ${getLinkClass('/about-us')}`}>
-        About
-      </Link>
-
-      {user && (
-        <>
-          <div className="relative" ref={coursesRef}>
-            <button onClick={toggleCourses} className="block px-4 py-2 w-full text-left hover:bg-gray-100">
-              Courses
-            </button>
-            {coursesOpen && (
-              <div className="absolute right-0 top-10 w-full bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
-                <button onClick={() => navigate('/form1')} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-                  Form 1 Course
-                </button>
-                <button onClick={navigateToForm2} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-                  Form 2 Course
-                </button>
-                <button onClick={navigateToForm3} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-                  Form 3 Course
-                </button>
-                <button onClick={navigateToForm4} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-                  Form 4 Course
-                </button>
-              </div>
-            )}
-          </div>
-          <div className="relative" ref={adminMenuRef}>
-            <button onClick={toggleAdminMenu} className="block px-4 py-2 w-full text-left hover:bg-gray-100">
-              Admin
-            </button>
-            {adminMenuOpen && (
-              <div className="absolute right-0 top-10 w-full bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
-                <button onClick={navigateToRegisterAdmin} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-                  Register Admin
-                </button>
-                <button onClick={navigateToAdmin} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-                  Admin Page
-                </button>
-              </div>
-            )}
-          </div>
-          <Link to="/contact-us" className={`block px-4 py-2 ${getLinkClass('/contact-us')}`}>
-            Contact
-          </Link>
           <button
-            onClick={handleLogout}
-            className="bg-gradient-to-r from-green-400 to-blue-500 text-white w-full px-4 py-2 rounded-md"
+            onClick={toggleMenu}
+            className="block text-gray-800 hover:text-gray-900 focus:outline-none"
           >
-            Logout
+            <svg
+              className="h-6 w-6 text-gray-800" // Ensure the color is visible
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className={menuOpen ? 'hidden' : 'block'}
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke="currentColor" // Use currentColor for consistent color
+                strokeWidth="2"
+              />
+              <path
+                className={menuOpen ? 'block' : 'hidden'}
+                d="M6 18L18 6M6 6l12 12"
+                stroke="currentColor" // Use currentColor for consistent color
+                strokeWidth="2"
+              />
+            </svg>
           </button>
-        </>
-      )}
-    </div>
-  )}
-</div>
+          {menuOpen && (
+            <div className="absolute right-0 top-16 mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30" ref={menuRef}>
+              <Link to="/home" className={`block px-4 py-2 ${getLinkClass('/home')}`}>
+                Home
+              </Link>
+              <Link to="/about-us" className={`block px-4 py-2 ${getLinkClass('/about-us')}`}>
+                About
+              </Link>
+
+              {user && (
+                <>
+                  <div className="relative" ref={coursesRef}>
+                    <button onClick={toggleCourses} className="block px-4 py-2 w-full text-left hover:bg-gray-100">
+                      Courses
+                    </button>
+                    {coursesOpen && (
+                      <div className="absolute right-0 top-10 w-full bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
+                        <button onClick={() => navigate('/courses')} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                          Form 1 Course
+                        </button>
+                        <button onClick={navigateToForm2} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                          Form 2 Course
+                        </button>
+                        <button onClick={navigateToForm3} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                          Form 3 Course
+                        </button>
+                        <button onClick={navigateToForm4} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                          Form 4 Course
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                  <div className="relative" ref={adminMenuRef}>
+                    <button onClick={toggleAdminMenu} className="block px-4 py-2 w-full text-left hover:bg-gray-100">
+                      Admin
+                    </button>
+                    {adminMenuOpen && (
+                      <div className="absolute right-0 top-10 w-full bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
+                        <button onClick={navigateToRegisterAdmin} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                          Register Admin
+                        </button>
+                        <button onClick={navigateToAdmin} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
+                          Admin Page
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                  <Link to="/contact-us" className={`block px-4 py-2 ${getLinkClass('/contact-us')}`}>
+                    Contact
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className="bg-gradient-to-r from-green-400 to-blue-500 text-white w-full px-4 py-2 rounded-md"
+                  >
+                    Logout
+                  </button>
+                </>
+              )}
+            </div>
+          )}
+        </div>
 
       </nav>
     </header>
