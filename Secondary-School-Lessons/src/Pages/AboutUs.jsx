@@ -30,36 +30,8 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-      {/* Section 2  start here */}
-      <div className="min-h-screen  flex items-center justify-center">
-        <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8 ">
-          <h1 className="text-4xl font-bold text-center text-blue-600 mb-8 ">Welcome to Our Course Platform</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
-            <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h2 className="text-2xl font-semibold mb-2 text-blue-500">Course Form 1</h2>
-              <p className="text-gray-700 mb-4">Brief description of the course, highlighting key features and what students will learn.</p>
-              <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300">Learn More</button>
-            </div>
-            <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h2 className="text-2xl font-semibold mb-2 text-blue-500">Course Form 2</h2>
-              <p className="text-gray-700 mb-4">Brief description of the course, highlighting key features and what students will learn.</p>
-              <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300">Learn More</button>
-            </div>
-            <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h2 className="text-2xl font-semibold mb-2 text-blue-500">Course Form 3</h2>
-              <p className="text-gray-700 mb-4">Brief description of the course, highlighting key features and what students will learn.</p>
-              <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300">Learn More</button>
-            </div>
-            <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h2 className="text-2xl font-semibold mb-2 text-blue-500">Course Form 4</h2>
-              <p className="text-gray-700 mb-4">Brief description of the course, highlighting key features and what students will learn.</p>
-              <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300">Learn More</button>
-            </div>
-            {/* Add more course cards as needed */}
-          </div>
-        </div>
-      </div>
-      {/* Section 2 End here */}
+     
+ 
 
       <div className="flex justify-center mt-8 space-x-4">
         <button
