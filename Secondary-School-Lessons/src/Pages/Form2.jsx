@@ -5,14 +5,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
-import arabicImage from '../images/member1.jpeg';
-import englishImage from '../images/member1.jpeg';
-import mathImage from '../images/member1.jpeg';
-import physicsImage from '../images/member1.jpeg';
-import chemistryImage from '../images/f1.chem.jpeg';
-import historyImage from '../images/member1.jpeg';
-import biologyImage from '../images/member1.jpeg';
-import geographyImage from '../images/member1.jpeg';
+import arabicImage from '../images/ClassImages/car1.jpg';
+import englishImage from '../images/ClassImages/eng2.jpg';
+import mathImage from '../images/ClassImages/math2.jpg';
+import physicsImage from '../images/ClassImages/phy2.jpg';
+import chemistryImage from '../images/ClassImages/chem2.jpg';
+import historyImage from '../images/ClassImages/his10.jpg';
+import biologyImage from '../images/ClassImages/bioForm2.jpg';
+import TechnologyImage from '../images/ClassImages/tech2.jpg';
 
 const form2Data = [
   { id: 1, name: 'دورة اللغة العربية', description: 'ستتعلم في هذه الدورة جميع دروس اللغة العربية لجميع صفوف المرحلة الثانوية', image: arabicImage },
@@ -22,7 +22,7 @@ const form2Data = [
   { id: 5, name: 'Chemistry Course', description: 'Explore the principles of Chemistry through detailed lessons.', image: chemistryImage },
   { id: 6, name: 'History Course', description: 'Dive into the important events and figures in History.', image: historyImage },
   { id: 7, name: 'Biology Course', description: 'Understand the complexities of Biology with our comprehensive course.', image: biologyImage },
-  { id: 8, name: 'Technology Course', description: 'Understand Geography with lessons covering various topics.', image: geographyImage },
+  { id: 8, name: 'Technology Course', description: 'Understand Geography with lessons covering various topics.', image:TechnologyImage },
 ];
 
 const NextArrow = ({ className, onClick, currentSlide, slideCount }) => (

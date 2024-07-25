@@ -179,21 +179,7 @@ const Header = ({ user, onLogout }) => {
                       </div>
                     )}
                   </div>
-                  <div className="relative" ref={adminMenuRef}>
-                    <button onClick={toggleAdminMenu} className="block px-4 py-2 w-full text-left hover:bg-gray-100">
-                      Admin
-                    </button>
-                    {adminMenuOpen && (
-                      <div className="absolute right-0 top-10 w-full bg-white border border-gray-200 divide-y divide-gray-200 rounded-md shadow-lg z-30">
-                        <button onClick={navigateToRegisterAdmin} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-                          Register Admin
-                        </button>
-                        <button onClick={navigateToAdmin} className="block w-full text-left p-2 text-lg font-medium transition duration-300">
-                          Admin Page
-                        </button>
-                      </div>
-                    )}
-                  </div>
+              
                   <Link to="/contact-us" className={`block px-4 py-2 ${getLinkClass('/contact-us')}`}>
                     Contact
                   </Link>

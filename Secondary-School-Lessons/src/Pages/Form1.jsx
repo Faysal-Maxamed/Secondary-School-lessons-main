@@ -6,14 +6,14 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 // Placeholder images (replace with actual image paths or URLs)
-import arabicImage from '../images/member1.jpeg';
-import englishImage from '../images/member1.jpeg';
-import mathImage from '../images/member1.jpeg';
-import physicsImage from '../images/member1.jpeg';
-import chemistryImage from '../images/f1.chem.jpeg';
-import historyImage from '../images/member1.jpeg';
-import biologyImage from '../images/member1.jpeg';
-import SoomaaliImage from '../images/member1.jpeg';
+import arabicImage from '../images/ClassImages/car1.jpg';
+import englishImage from '../images/ClassImages/eng1.jpg';
+import mathImage from '../images/ClassImages/math1.jpg';
+import physicsImage from '../images/ClassImages/phy1.jpg';
+import chemistryImage from '../images/ClassImages/chem1.jpg';
+import historyImage from '../images/ClassImages/his9.jpg';
+import biologyImage from '../images/ClassImages/form1Bio.jpg';
+import SoomaaliImage from '../images/ClassImages/som1.jpg';
 
 const form1Data = [
   { id: 1, name: 'دورة اللغة العربية', description: 'ستتعلم في هذه الدورة جميع دروس اللغة العربية لجميع صفوف المرحلة الثانوية', image: arabicImage },

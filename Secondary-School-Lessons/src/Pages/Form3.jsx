@@ -6,17 +6,17 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 // Placeholder images (replace with actual image paths or URLs)
-import arabicImage from '../images/member1.jpeg';
-import englishImage from '../images/member1.jpeg';
-import mathImage from '../images/member1.jpeg';
-import physicsImage from '../images/member1.jpeg';
-import chemistryImage from '../images/f1.chem.jpeg';
-import historyImage from '../images/member1.jpeg';
-import biologyImage from '../images/member1.jpeg';
-import geographyImage from '../images/member1.jpeg';
+import TechnologyImage from '../images/ClassImages/tech3.jpg';
+import englishImage from '../images/ClassImages/eng3.jpg';
+import mathImage from  '../images/ClassImages/math3.jpg';
+import physicsImage from  '../images/ClassImages/physics.jpg';
+import chemistryImage from '../images/ClassImages/buss3.jpg';
+import historyImage from  '../images/ClassImages/his11.jpg';
+import biologyImage from '../images/ClassImages/bioform3.jpg';
+
 
 const form3Data = [
-  { id: 1, name: 'Technology', description: 'In this course you will learn all Tecnology lessons of  the secondary school', image: arabicImage },
+  { id: 1, name: 'Technology', description: 'In this course you will learn all Tecnology lessons of  the secondary school', image: TechnologyImage },
   { id: 2, name: 'Chemistry Course', description: 'In this course you will learn all Chemistry lessons of all classes of the secondary school', image: englishImage },
   { id: 3, name: 'Math Course', description: 'Master Mathematics with lessons covering various topics.', image: mathImage },
   { id: 4, name: 'Physics Course', description: 'Learn the fundamentals of Physics for secondary school.', image: physicsImage },
