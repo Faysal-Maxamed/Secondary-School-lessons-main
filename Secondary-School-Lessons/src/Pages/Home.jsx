@@ -213,7 +213,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 mt-8 text-center text-sm">
-          <p className="mb-2">&copy; 2024 Edu Platform.co</p>
+          <p className="mb-2">&copy; 2024 Smart College.co</p>
           <p>
             <a href="#" className="hover:text-green-500">Terms of Service</a> |
             <a href="#" className="hover:text-green-500"> Privacy Policy</a> |

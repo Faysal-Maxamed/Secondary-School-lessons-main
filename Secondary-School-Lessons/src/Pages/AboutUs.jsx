@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import teamMember1 from '../images/use1.jpg';
 import starIcon from '../images/star.png';
 import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import p1 from '../images/p1.jpeg';
+import p2 from '../images/p2.jpeg';
+import p3 from '../images/p3.jpeg';
 
 const AboutUs = () => {
   const [activeSection, setActiveSection] = useState(null);
@@ -9,6 +12,44 @@ const AboutUs = () => {
   const handleSectionClick = (section) => {
     setActiveSection(activeSection === section ? null : section);
   };
+  const teamMembers = [
+    {
+      name: 'NAjiib',
+      title: 'Manager',
+      image: p1,
+      description: 'As the manager, Najiib leads our e-learning platform with a vision to innovate and excel. With years of experience in the industry, he ensures our strategies align with our goals and values.',
+      skills: [
+        { name: 'Somali', proficiency: '99%' },
+        { name: 'English', proficiency: '85%' },
+        { name: 'Carabi', proficiency: '64%' },
+        { name: 'Technology', proficiency: '100%' },
+      ],
+    },
+    {
+      name: 'Feysal',
+      title: 'Teacher',
+      image: p2,
+      description: 'Faysal, our dedicated teacher, imparts knowledge with precision and care. He ensures that every lesson is delivered effectively and meets the highest educational standards.',
+      skills: [
+        { name: 'Somali', proficiency: '84%' },
+        { name: 'English', proficiency: '22%' },
+        { name: 'Carabi', proficiency: '84%' },
+        { name: 'Technology', proficiency: '45%' },
+      ],
+    },
+    {
+      name: 'Zeynab',
+      title: 'Teacher',
+      image: p3,
+      description: 'Zeynab is a skilled teacher who brings our lessons to life with engaging and effective teaching methods. Her expertise in various subjects helps our students stay ahead in their education.',
+      skills: [
+        { name: 'Somali', proficiency: '87%' },
+        { name: 'Carabi', proficiency: '45%' },
+        { name: 'English', proficiency: '99%' },
+        { name: 'Technology', proficiency: '78%' },
+      ],
+    },
+  ];
 
   return (
     <div className="container mx-auto  mt-8">
@@ -30,8 +71,38 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-     
- 
+
+      <div>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 text-black mt-8">Meet Our Team!</h2>
+        <p className="text-center mb-8 text-black">We listen, we discuss, we advise and develop. We love to learn and use the latest technologies.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {teamMembers.map((member, index) => (
+            <div
+              key={index}
+              className={`team-member bg-gray-200 rounded-lg shadow-lg p-6 text-center hover:transform hover:scale-105 transition-transform duration-300`}
+            >
+              <img src={member.image} alt={member.name} className="w-24 h-24 rounded-full mx-auto mb-4" />
+              <h3 className="text-xl font-bold mb-2">{member.name}</h3>
+              <p className="text-gray-500 mb-4">{member.title}</p>
+              <p className="text-gray-700 mb-4">{member.description}</p>
+              <div className="skills">
+                {member.skills.map((skill, skillIndex) => (
+                  <div key={skillIndex} className="skill mb-2">
+                    <div className="flex justify-between mb-1">
+                      <span>{skill.name}</span>
+                      <span>{skill.proficiency}</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div className="bg-blue-500 h-2.5 rounded-full" style={{ width: skill.proficiency }}></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
 
       <div className="flex justify-center mt-8 space-x-4">
         <button
@@ -126,7 +197,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 mt-8 text-center text-sm">
-          <p className="mb-2">&copy; 2024 Edu Platform.co</p>
+          <p className="mb-2">&copy; 2024 Smart College.co</p>
           <p>
             <a href="#" className="hover:text-green-500">Terms of Service</a> |
             <a href="#" className="hover:text-green-500"> Privacy Policy</a> |

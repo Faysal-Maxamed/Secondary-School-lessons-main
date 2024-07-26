@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { FaPlayCircle, FaBars } from 'react-icons/fa';
 
 const lessonsData = {
@@ -118,9 +118,13 @@ const F4Lessons = () => {
   const lessons = lessonsData[courseId] || [];
   const [selectedLesson, setSelectedLesson] = useState(null);
   const [mobileSidebarVisible, setMobileSidebarVisible] = useState(false);
+  const navigate = useNavigate(); // Create navigate function
 
   const handleLessonClick = (lesson) => {
     setSelectedLesson(lesson);
+  };
+  const handleGoBack = () => {
+    navigate('/form4'); // Navigate to Form2 page
   };
 
   const toggleMobileSidebar = () => {
@@ -139,13 +143,16 @@ const F4Lessons = () => {
       <div className="flex flex-col md:flex-row">
         {/* Sidebar for Desktop */}
         <div className={`md:w-1/4 bg-gray-200 p-4 rounded-lg ${mobileSidebarVisible ? 'block md:hidden' : 'hidden md:block'}`}>
-          <h4 className="text-xl font-semibold mb-12">Other Lessons in this Course:</h4>
+        <button onClick={handleGoBack} className="flex items-center ml-16 justify-center px-4 py-2 bg-green-500 text-white font-bold rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+            <span className="ml-2">Go Back</span>
+          </button>
+          <h4 className="text-xl font-semibold mb-4">Other Lessons in this Course:</h4>
           <div className="space-y-2">
             {lessons.map((lesson) => (
               <button
                 key={lesson.id}
                 onClick={() => handleLessonClick(lesson)}
-                className="flex items-center w-full text-left p-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition duration-300"
+                className="flex items-center w-full text-left p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-800 transition duration-300"
               >
                 <FaPlayCircle className="mr-2 text-blue ml-16" />
                 {lesson.title}

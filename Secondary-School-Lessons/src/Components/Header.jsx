@@ -26,13 +26,11 @@ const Header = ({ user, onLogout }) => {
     setCoursesOpen(!coursesOpen);
   };
 
-  const toggleAdminMenu = () => { // New function to toggle admin menu
-    setAdminMenuOpen(!adminMenuOpen);
-  };
+ 
 
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setMenuOpen(false);
+      setMenuOpen(true);
     }
     if (coursesRef.current && !coursesRef.current.contains(event.target)) {
       setCoursesOpen(false);
